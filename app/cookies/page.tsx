@@ -5,7 +5,7 @@ export default function CookiesPage() {
     <main className="flex min-h-screen items-center justify-center bg-white px-6 py-16 text-[#0c0558]">
       <article className="w-full max-w-xl">
         <p className="text-base uppercase capitalize text-justify font-medium tracking-tight text-[#999]">
-          Mabz CASH LOANS (PTY) LTD
+          Mabz Loans
         </p>
         <p className="text-sm text-justify font-medium tracking-tight text-[#999]">
           NCR Registered - CP21885
