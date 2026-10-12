@@ -58,14 +58,14 @@ const CookieConsent = () => {
                 onClick={() => saveChoice("accepted")}
                 className="w-fit  geist cursor-pointer capitalize max-h-7 rounded-3xl border border-black/10 bg-black/[0.03] px-2 py-1 text-sm font-medium leading-4 tracking-tight text-[#333] [overflow-wrap:anywhere]"
               >
-                Accept analytics
+                Accept
               </button>
               <button
                 type="button"
                 onClick={() => saveChoice("rejected")}
                 className="w-fit  geist cursor-pointer capitalize max-h-7 rounded-3xl border border-black/10 bg-black/[0.03] px-2 py-1 text-sm font-medium leading-4 tracking-tight text-[#333] [overflow-wrap:anywhere]"
               >
-                Decline analytics
+                Decline
               </button>
             </span>
             <Link
