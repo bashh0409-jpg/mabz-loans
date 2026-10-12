@@ -74,9 +74,9 @@ const Contact = ({
         </div>
       </div>
 
-      <div className="mx-auto flex w-full max-w-7xl  items-center gap-3  px-4 py-6 justify-between md:flex-row md:justify-content md:px-8 md:text-left">
+      <div className="mx-auto flex flex-col w-full max-w-7xl gap- px-4 py-6 justify-between md:flex-row md:justify-content md:px-8 md:text-left">
         <p  className="text-base text-justify font-medium tracking-tight text-[#999]">
-          &copy; 2026 Mabz Loans. All rights reserved.
+          &copy;2026 Mabz Loans. All rights reserved.
         </p>
         <Link
           href="/privacy"
