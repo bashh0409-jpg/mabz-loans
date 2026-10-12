@@ -17,7 +17,7 @@ interface RequirementsProps {
 const DEFAULT_ITEMS: Requirement[] = [
   { title: "South African Original ID" },
   { title: "3-Month Bank Statement" },
-  { title: "Latest Payslip" },
+  { title: "Your Latest Payslip" },
 ];
 
 gsap.registerPlugin(ScrollTrigger);

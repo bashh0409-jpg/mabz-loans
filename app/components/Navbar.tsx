@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="flex p-4 z-100 text-white fixed mix-blend-difference w-full justify-between items-center text-md font-semibold uppercase tracking-tight">
+    <div className="flex p-4 z-100 text-white fixed mix-blend-difference w-full justify-between items-center text-xl font-semibold uppercase tracking-tight">
       <div>
         <span>Mabz Loans</span>
       </div>

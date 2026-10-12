@@ -1,71 +1,84 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import { Analytics } from "@vercel/analytics/next";
+import { useSyncExternalStore } from "react";
 
-type Consent = "accepted" | "declined";
+const consentStorageKey = "weeverything-cookie-consent";
 
-const STORAGE_KEY = "cookie-consent";
+type ConsentChoice = "accepted" | "rejected";
 
-const Cookies = () => {
-  // Start hidden and decide after mount: localStorage doesn't exist during SSR,
-  // so reading it in the initial state would cause a hydration mismatch
-  const [visible, setVisible] = useState(false);
+const getStoredChoice = (): ConsentChoice | null => {
+  const storedChoice = window.localStorage.getItem(consentStorageKey);
 
-  useEffect(() => {
-    try {
-      if (!localStorage.getItem(STORAGE_KEY)) setVisible(true);
-    } catch {
-      // Storage can throw (private mode, blocked cookies); showing the banner is the safe fallback
-      setVisible(true);
-    }
-  }, []);
+  return storedChoice === "accepted" || storedChoice === "rejected"
+    ? storedChoice
+    : null;
+};
 
-  const handleChoice = (choice: Consent) => {
-    try {
-      localStorage.setItem(STORAGE_KEY, choice);
-    } catch {
-      // Choice just won't persist across visits; still dismiss for this session
-    }
-    setVisible(false);
+const subscribeToChoice = (onChange: () => void) => {
+  window.addEventListener("storage", onChange);
+  window.addEventListener(consentStorageKey, onChange);
+
+  return () => {
+    window.removeEventListener("storage", onChange);
+    window.removeEventListener(consentStorageKey, onChange);
+  };
+};
+
+const CookieConsent = () => {
+  const choice = useSyncExternalStore(
+    subscribeToChoice,
+    getStoredChoice,
+    () => null,
+  );
+
+  const saveChoice = (nextChoice: ConsentChoice) => {
+    window.localStorage.setItem(consentStorageKey, nextChoice);
+    window.dispatchEvent(new Event(consentStorageKey));
   };
 
-  if (!visible) return null;
-
   return (
-    <div
-      role="dialog"
-      aria-label="Cookie notice"
-      className="fixed bottom-5 max-w-md w-full left-4 right-4 z-50 flex items-center justify-between gap-2 bg-black md:left-auto md:right-10 md:max-w-xs"
-    >
-      <span className="px-2 p-1 text-sm font-semibold tracking-tight text-white">
-        We use{" "}
-        <a
-          href="/cookies"
-          className="cursor-pointer underline underline-offset-2"
-        >
-          cookies
-        </a>
-        .
-      </span>
+    <>
+      {choice === "accepted" ? <Analytics /> : null}
 
-      <div className="flex gap-2 text-sm font-semibold tracking-tight text-white">
-        <button
-          type="button"
-          onClick={() => handleChoice("accepted")}
-          className="cursor-pointer border-l border-white/30 px-2 p-0.5 underline underline-offset-2"
+      {choice === null ? (
+        <aside
+          aria-label="Cookie consent"
+          className="fixed inset-x-4 bottom-4 rounded-2xl z-[60] border border-black/15 bg-white p-2 shadow-[0_18px_60px_rgb(0_0_0/18%)] sm:inset-x-auto sm:bottom-6 sm:left-6 sm:max-w-sm"
         >
-          Accept
-        </button>
-        <button
-          type="button"
-          onClick={() => handleChoice("declined")}
-          className="cursor-pointer border-l border-white/30 px-2 p-0.5 underline underline-offset-2"
-        >
-          Decline
-        </button>
-      </div>
-    </div>
+          <p className="text-sm mon leading-4 geist tracking-tight font-medium uppercas text-[#999]">
+            We use necessary cookies to keep the site working. With your
+            permission, we also use privacy-friendly analytics to improve it.
+          </p>
+          <div className="mt-4 flex flex-wrap justify-between items-center gap-2">
+            <span className="gap-1 flex">
+              <button
+                type="button"
+                onClick={() => saveChoice("accepted")}
+                className="w-fit  geist cursor-pointer capitalize max-h-7 rounded-3xl border border-black/10 bg-black/[0.03] px-2 py-1 text-sm font-medium leading-4 tracking-tight text-[#333] [overflow-wrap:anywhere]"
+              >
+                Accept analytics
+              </button>
+              <button
+                type="button"
+                onClick={() => saveChoice("rejected")}
+                className="w-fit  geist cursor-pointer capitalize max-h-7 rounded-3xl border border-black/10 bg-black/[0.03] px-2 py-1 text-sm font-medium leading-4 tracking-tight text-[#333] [overflow-wrap:anywhere]"
+              >
+                Decline analytics
+              </button>
+            </span>
+            <Link
+              href="/cookies"
+              className="w-fit  geist cursor-pointer capitalize max-h-7 rounded-3xl border border-black/10 bg-black/[0.03] px-2 py-1 text-sm font-medium leading-4 tracking-tight text-[#333] [overflow-wrap:anywhere]"
+            >
+              Learn more
+            </Link>
+          </div>
+        </aside>
+      ) : null}
+    </>
   );
 };
 
-export default Cookies;
+export default CookieConsent;
