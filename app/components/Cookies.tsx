@@ -48,7 +48,7 @@ const CookieConsent = () => {
           className="fixed inset-x-4 bottom-4 rounded-2xl z-[60] border border-black/15 bg-white p-2 shadow-[0_18px_60px_rgb(0_0_0/18%)] sm:inset-x-auto sm:bottom-6 sm:left-6 sm:max-w-sm"
         >
           <p className="text-sm mon leading-4 geist tracking-tight font-medium uppercas text-[#999]">
-            We use necessary cookies to keep the site working. With your
+            We use necessary <a href="/cookies" className="underline  hover:underline focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-white">cookies</a> to keep the site working. With your
             permission, we also use privacy-friendly analytics to improve it.
           </p>
           <div className="mt-4 flex flex-wrap justify-between items-center gap-2">

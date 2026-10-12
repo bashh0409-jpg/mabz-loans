@@ -17,8 +17,9 @@ const useIsoLayoutEffect =
   typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
 const Hero = ({
-  eyebrow = "Loans, made simple",
-  lines = ["Your bridge", "to better", "finance."],
+  eyebrow = "Your bridge to better finances",
+  
+  lines = ["Need cash", "fast? We've", "got you!"],
   description = "Tell us what you need. Call or email and we'll walk you through the options.",
   phone = "08123456789",
   email = "mabzloans@gmail.com",
@@ -71,6 +72,7 @@ const Hero = ({
         aria-hidden="true"
         viewBox="0 0 1200 400"
         preserveAspectRatio="xMidYMax slice"
+        data-fade
         className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-[65%] w-full"
       >
         {/* pathLength=1 normalizes the length so dash values 1 -> 0 draw the full path */}
@@ -131,7 +133,7 @@ const Hero = ({
               href={`mailto:${email}`}
               className="border border-white/40 px-5 py-3 transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
-              Email
+              Email us
             </a>
           </div>
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useId, useState } from "react";
+import useScrollTextReveal from "./useScrollTextReveal";
 
 interface FaqItem {
   question: string;
@@ -39,12 +40,14 @@ const Faq = ({ heading = "Questions", items = DEFAULT_ITEMS }: FaqProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   // useId keeps aria ids unique and stable across SSR and hydration
   const baseId = useId();
+  const sectionRef = useScrollTextReveal<HTMLElement>();
 
   const toggle = (index: number) =>
     setOpenIndex((prev) => (prev === index ? null : index));
 
   return (
     <section
+      ref={sectionRef}
       id="faq"
       aria-labelledby="faq-heading"
       className="w-full bg-white text-black"
@@ -52,6 +55,7 @@ const Faq = ({ heading = "Questions", items = DEFAULT_ITEMS }: FaqProps) => {
       <div className="mx-auto grid max-w-7xl grid-cols-12 gap-y-10 px-4 py-20 md:px-8 md:py-32">
         <h2
           id="faq-heading"
+          data-text-reveal
           className="col-span-12 text-[clamp(2rem,4vw,7rem)] font-semibold uppercase leading-[0.9] tracking-tighter md:col-span-5"
         >
           {heading}
@@ -72,6 +76,7 @@ const Faq = ({ heading = "Questions", items = DEFAULT_ITEMS }: FaqProps) => {
                   <button
                     type="button"
                     id={buttonId}
+                    data-text-reveal
                     aria-expanded={isOpen}
                     aria-controls={panelId}
                     onClick={() => toggle(i)}
@@ -101,7 +106,8 @@ const Faq = ({ heading = "Questions", items = DEFAULT_ITEMS }: FaqProps) => {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="max-w-xl pb-6 text-base font-medium tracking-tight text-black/70">
+                    
+                    <p className="text-base pb-6 leading-5  text-justify font-medium tracking-tight text-[#999]">
                       {answer}
                     </p>
                   </div>
@@ -116,4 +122,3 @@ const Faq = ({ heading = "Questions", items = DEFAULT_ITEMS }: FaqProps) => {
 };
 
 export default Faq;
-

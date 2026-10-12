@@ -4,17 +4,18 @@ export default function PrivacyPage() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-white px-6 py-16 text-[#0c0558]">
       <article className="w-full max-w-xl">
-        <p className="text-sm text-justify font-medium tracking-tight text-[#999]">
-          Mabz Loans
+        <p className="text-base uppercase capitalize text-justify font-medium tracking-tight text-[#999]">
+          Mabz CASH LOANS (PTY) LTD
         </p>
-        <p className="text-base mt- text-justify font-medium tracking-tight text-[#999]">
-          Last Updated: 2026-10-12
+        <p className="text-sm text-justify font-medium tracking-tight text-[#999]">
+          NCR Registered - CP21885
         </p>
         <h1 className="mt-10 mb-4 text-5xl tracking-tighter font-semibold">
           Privacy policy
         </h1>
-        <p className="text-sm text-justify font-medium tracking-tight text-[#999]">
-          NCR Registered - CP21885
+
+        <p className="text-base mt- text-justify font-medium tracking-tight text-[#999]">
+          Last Updated: 2026-10-12
         </p>
 
         <div className="mt-8 space-y-5 text-base leading-5 text-[#999]">
@@ -24,7 +25,6 @@ export default function PrivacyPage() {
             online loan application form.
           </p>
           <section>
-            <h2 className="mon geist   overflow-hidden text-xl font-semibold tracking-tighter text-black mb-2 "></h2>
             <h2 className="mon geist   overflow-hidden text-xl font-semibold tracking-tighter text-black mb-2 ">
               Information you provide
             </h2>

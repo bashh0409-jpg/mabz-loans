@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useEffect, useLayoutEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import useScrollTextReveal from "./useScrollTextReveal";
 
 interface Requirement {
   title: string;
@@ -31,7 +32,7 @@ const Requirements = ({
   items = DEFAULT_ITEMS,
   banner = "We help both employed & SASSA beneficiaries!",
 }: RequirementsProps) => {
-  const sectionRef = useRef<HTMLElement>(null);
+  const sectionRef = useScrollTextReveal<HTMLElement>();
 
   useIsoLayoutEffect(() => {
     const section = sectionRef.current;
@@ -66,11 +67,12 @@ const Requirements = ({
         <div className="flex flex-col  gap-y-4">
           <h2
             id="requirements-heading"
+            data-text-reveal
             className="col-span-12  text-[clamp(2rem,6vw,7rem)] font-semibold uppercase leading-[0.9] tracking-tighter md:col-span-8"
           >
             {heading}
           </h2>
-          <p className="col-span-12 text-sm font-semibold uppercase tracking-tight max-w-md text-black/60 md:col-span-4">
+          <p data-text-reveal className="col-span-12 text-md leading-5 font-semibold uppercas tracking-tight max-w-md text-black/60 md:col-span-4">
             Bring these three documents to your appointment and we can get started.
           </p>
         </div>
@@ -98,7 +100,7 @@ const Requirements = ({
 
       {/* Full-bleed banner outside the max-width wrapper so the navy runs edge to edge */}
       <div className="w-full bg-[#0c0558] px-4 py-10 text-white md:px-8 md:py-14">
-        <p className="mx-auto max-w-7xl text-[clamp(1.5rem,4.5vw,4rem)] font-semibold uppercase leading-[0.95] tracking-tighter">
+        <p data-text-reveal className="mx-auto max-w-7xl text-[clamp(1.5rem,4.5vw,4rem)] font-semibold uppercase leading-[0.95] tracking-tighter">
           {banner}
         </p>
       </div>

@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
+import useScrollTextReveal from "./useScrollTextReveal";
 
 interface ContactProps {
   phones?: string[];
@@ -10,43 +13,61 @@ const Contact = ({
   phones = ["078 2193 521", "082 891 4983"],
   email = "mabzloans@gmail.com",
 }: ContactProps) => {
+  const sectionRef = useScrollTextReveal<HTMLElement>();
   const linkStyles =
     "w-fit text-[clamp(1.5rem,4vw,3rem)] font-semibold tracking-tighter underline decoration-white/30 underline-offset-4 transition-colors hover:decoration-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white";
 
   return (
     <section
+      ref={sectionRef}
       id="contact"
       aria-labelledby="contact-heading"
       className="w-full bg-[#0c0558] text-white"
     >
       <div className="mx-auto flex max-w-7xl flex-col gap-12 px-4 py-20 md:gap-20 md:px-8 md:py-32">
-        <p className="text-xs font-semibold uppercase leading-5 tracking-tight text-white/60 md:text-sm">
+        <p className="text-sm text-justify font-medium tracking-tight text-[#999]">
           NCR Registered - CP21885
-        </p>{" "}
+        </p>
         <h2
           id="contact-heading"
+          data-text-reveal
           className="text-[clamp(3rem,11vw,10rem)] font-semibold uppercase leading-[0.9] tracking-tighter"
         >
           Let&apos;s talk.
         </h2>
         <div className="grid grid-cols-12 gap-y-10">
           <div className="col-span-12 flex flex-col gap-2 md:col-span-6">
-            <p className="text-sm font-semibold uppercase tracking-tight text-white/60">
+            <p
+              data-text-reveal
+              className="text-sm font-semibold uppercase tracking-tight text-white/60"
+            >
               Call
             </p>
             {phones.map((phone) => (
-              <a key={phone} href={`tel:${phone}`} className={linkStyles}>
+              <a
+                key={phone}
+                href={`tel:${phone}`}
+                className={linkStyles}
+                data-text-reveal
+              >
                 {phone}
               </a>
             ))}
           </div>
 
           <div className="col-span-12 flex flex-col gap-2 md:col-span-6">
-            <p className="text-sm font-semibold uppercase tracking-tight text-white/60">
+            <p
+              data-text-reveal
+              className="text-sm font-semibold uppercase tracking-tight text-white/60"
+            >
               Email
             </p>
             {/* break-all stops a long address from overflowing narrow phones */}
-            <a href={`mailto:${email}`} className={`${linkStyles} break-all`}>
+            <a
+              href={`mailto:${email}`}
+              className={`${linkStyles} break-all`}
+              data-text-reveal
+            >
               {email}
             </a>
           </div>
@@ -54,16 +75,16 @@ const Contact = ({
       </div>
 
       <div className="mx-auto flex w-full max-w-7xl  items-center gap-3  px-4 py-6 justify-between md:flex-row md:justify-content md:px-8 md:text-left">
-      
-        <p className="text-xs font-semibold uppercas leading-5 tracking-tight text-white/60 md:text-sm">
+        <p  className="text-base text-justify font-medium tracking-tight text-[#999]">
           &copy; 2026 Mabz Loans. All rights reserved.
         </p>
         <Link
           href="/privacy"
-          className="text-xs font-semibold leading-5 tracking-tight text-white/60 underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:text-sm"
+          className="text-base text-justify font-medium tracking-tight underline-offset-4 hover:underline focus text-[#999]"
         >
           Privacy Policy
         </Link>
+      
       </div>
     </section>
   );
