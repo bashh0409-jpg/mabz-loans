@@ -75,7 +75,7 @@ const Faq = ({ heading = "Questions", items = DEFAULT_ITEMS }: FaqProps) => {
                     aria-expanded={isOpen}
                     aria-controls={panelId}
                     onClick={() => toggle(i)}
-                    className="flex w-full cursor-pointer items-center justify-between gap-6 py-6 text-left text-[clamp(1.25rem,2.6vw,2rem)] font-semibold uppercase leading-none tracking-tighter focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0c0558]"
+                    className="flex w-full cursor-pointer items-center justify-between gap-6 py-6 text-left text-[clamp(1.25rem,2.6vw,2rem)] font-semibold uppercas leading-none tracking-tighter focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0c0558]"
                   >
                     <span>{question}</span>
                     {/* Decorative: rotating the + 45deg turns it into an x without a second icon */}

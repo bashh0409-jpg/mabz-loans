@@ -7,9 +7,9 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const links = [
     { label: "Info", href: "#requirements" },
+    { label: "Privacy", href: "/privacy" },
     { label: "Faq", href: "#faq" },
     { label: "Contact", href: "#contact" },
-    { label: "Apply", href: "#contact" },
   ];
 
   return (

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 interface ContactProps {
   phones?: string[];
@@ -19,13 +20,15 @@ const Contact = ({
       className="w-full bg-[#0c0558] text-white"
     >
       <div className="mx-auto flex max-w-7xl flex-col gap-12 px-4 py-20 md:gap-20 md:px-8 md:py-32">
+        <p className="text-xs font-semibold uppercase leading-5 tracking-tight text-white/60 md:text-sm">
+          NCR Registered - CP21885
+        </p>{" "}
         <h2
           id="contact-heading"
           className="text-[clamp(3rem,11vw,10rem)] font-semibold uppercase leading-[0.9] tracking-tighter"
         >
           Let&apos;s talk.
         </h2>
-
         <div className="grid grid-cols-12 gap-y-10">
           <div className="col-span-12 flex flex-col gap-2 md:col-span-6">
             <p className="text-sm font-semibold uppercase tracking-tight text-white/60">
@@ -50,16 +53,17 @@ const Contact = ({
         </div>
       </div>
 
-      <div className=" px-4 flex w-full justify-between  py-6 md:px-8">
-        <p className="text-sm font-semibold uppercase tracking-tight text-white/60">
-          NCR Registered - CP21885
+      <div className="mx-auto flex w-full max-w-7xl  items-center gap-3  px-4 py-6 justify-between md:flex-row md:justify-content md:px-8 md:text-left">
+      
+        <p className="text-xs font-semibold uppercas leading-5 tracking-tight text-white/60 md:text-sm">
+          &copy; 2026 Mabz Loans. All rights reserved.
         </p>
-        <p className="text-sm font-semibold uppercase tracking-tight text-white/60">
-          &copy; 2026 Mabz Loans
-        </p>
-        <p className="text-sm font-semibold uppercase tracking-tight text-white/60">
+        <Link
+          href="/privacy"
+          className="text-xs font-semibold leading-5 tracking-tight text-white/60 underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:text-sm"
+        >
           Privacy Policy
-        </p>
+        </Link>
       </div>
     </section>
   );
