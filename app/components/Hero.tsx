@@ -57,6 +57,7 @@ const Hero = ({
   return (
     <section
       ref={sectionRef}
+      id="home"
       className="relative isolate flex min-h-[100dvh] w-full flex-col justify-between overflow-hidden bg-[#0c0558] px-4 pb-6 pt-24 text-white md:pt-28"
     >
       {/* Soft top-right glow for depth; purely decorative */}
