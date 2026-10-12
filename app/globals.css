@@ -1,8 +1,16 @@
 @import "tailwindcss";
+@import "lenis/dist/lenis.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fafafa;
+  --foreground: #f5f6f7;
+  --navy: #0f4b7a;
+  --navy-deep: #0a3b5d;
+  --orange: #f8a528;
+  --orange-deep: #ee8f16;
+  --orange-soft: #f9b647;
+  --white: #f6f8fb;
+  --shadow: rgba(0, 0, 0, 0.26);
 }
 
 @theme inline {
@@ -12,15 +20,39 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.orange {
+  background-color: #ee8f16 ;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+  /* Fixed navbar would otherwise cover the top of whatever section an anchor jumps to */
+  scroll-padding-top: 5rem;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar,
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 body {
+  scrollbar-width: none;
+  margin: 0;
+  min-height: 100vh;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Helvetica, sans-serif;
 }
