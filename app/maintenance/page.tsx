@@ -37,7 +37,7 @@ export default function MaintenancePage() {
           shortly. For enquiries in the meantime, get in touch with us directly.
         </p>
 
-        <div className="mt-5 flex flex-wrap items-center justify-center gap-1">
+        <div className="mt-3 flex flex-wrap items-center justify-center gap-1">
           <Link
             href="mailto:mabzloans@gmail.com"
             className="w-fit  geist capitalize max-h-7 rounded-3xl border border-white/10 bg-white px-2 py-1 text-sm font-medium leading-4 tracking-tight text-black [overflow-wrap:anywhere]"

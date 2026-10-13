@@ -6,12 +6,19 @@ export function proxy(request: NextRequest) {
   }
 
   const { pathname } = request.nextUrl;
-  if (
-    pathname === "/maintenance" ||
-    pathname.startsWith("/maintenance/") ||
+  const allowedInMaintenance = [
+    "/maintenance",
+    "/terms",
+    "/cookies",
+    "/privacy",
+  ];
+
+  const isAllowedPath =
+    allowedInMaintenance.some((route) => pathname === route || pathname.startsWith(`${route}/`)) ||
     pathname.startsWith("/_next/") ||
-    /\.[^/]+$/.test(pathname)
-  ) {
+    /\.[^/]+$/.test(pathname);
+
+  if (isAllowedPath || pathname.startsWith("/maintenance/")) {
     return NextResponse.next();
   }
 
