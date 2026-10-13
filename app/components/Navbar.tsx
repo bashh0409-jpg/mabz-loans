@@ -70,6 +70,7 @@ const RollingLabel = ({ label }: RollingLabelProps) => (
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -128,11 +129,25 @@ const Navbar = () => {
   useEffect(() => {
     if (!menuOpen) return;
 
+    const onPointerDown = (event: PointerEvent) => {
+      const target = event.target;
+      if (
+        target instanceof Node &&
+        !navRef.current?.contains(target) &&
+        !panelRef.current?.contains(target)
+      ) {
+        setMenuOpen(false);
+      }
+    };
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") setMenuOpen(false);
     };
+    document.addEventListener("pointerdown", onPointerDown);
     window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("pointerdown", onPointerDown);
+      window.removeEventListener("keydown", onKeyDown);
+    };
   }, [menuOpen]);
 
   // The panel is md:hidden, so close it on desktop widths or the nav would stay in its "open" colour
@@ -150,6 +165,7 @@ const Navbar = () => {
       {/* Blend only while closed; when open the nav sits on a white panel,
           so it switches to navy text with no blending. */}
       <nav
+        ref={navRef}
         className={`fixed top-0 left-0 z-[100] flex w-full items-center justify-between bg-transparent p-4 text-xl font-semibold tracking-tight ${
           menuOpen
             ? "text-[#0c0558] mix-blend-normal"
