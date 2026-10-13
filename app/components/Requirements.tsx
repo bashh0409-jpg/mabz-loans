@@ -32,7 +32,6 @@ const useIsoLayoutEffect =
 const Requirements = ({
   heading = "What you need",
   items = DEFAULT_ITEMS,
-  banner = "We help both employed & SASSA beneficiaries!",
 }: RequirementsProps) => {
   const sectionRef = useScrollTextReveal<HTMLElement>();
 
