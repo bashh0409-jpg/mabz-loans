@@ -74,13 +74,17 @@ const Requirements = ({
           >
             {heading}
           </h2>
-          <p data-text-reveal className="col-span-12 text-md leading-5 font-semibold uppercas tracking-tight max-w-md text-black/60 md:col-span-4">
-            Bring these three documents to your appointment and we can get started.
+          <p
+            data-text-reveal
+            className="col-span-12 text-md leading-5 font-semibold uppercas tracking-tight max-w-md text-black/60 md:col-span-4"
+          >
+            Bring these three documents to your appointment and we can get
+            started.
           </p>
         </div>
 
         {/* ol because the order is the checklist; 1 col phone, 3 cols from md */}
-        <ol className="grid grid-cols-1 gap-4 md:grid-cols-4">
+        <ol className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 ">
           {items.map(({ title }, i) => (
             <li
               key={title}
@@ -101,7 +105,6 @@ const Requirements = ({
       </div>
 
       <BannerTicker />
-      
     </section>
   );
 };

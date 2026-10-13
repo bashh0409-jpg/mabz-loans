@@ -214,13 +214,13 @@ const Navbar = () => {
         ref={panelRef}
         id="mobile-navigation"
         style={PANEL_INITIAL_STYLE}
-        className="fixed top-0 left-0 z-[90] flex min-h-[100dvh] w-full flex-col border-b border-[#0c0558]/10 bg-white px-4 pt-24 pb-8 text-2xl font-semibold tracking-tight text-[#0c0558] md:hidden"
+        className="fixed top-0 left-0 z-[90] flex min-h-fit w-full flex-col border-b border-[#0c0558]/10 bg-white px-4 pt-24 pb-8 text-2xl font-semibold tracking-tight text-[#0c0558] md:hidden"
       >
         {LINKS.map(({ label, href }) => (
           <a
             key={label}
             href={href}
-            data-menu-link
+            
             className={`uppercase ${NAV_ITEM_CLASSES}`}
             aria-label={label}
             onClick={() => setMenuOpen(false)}
