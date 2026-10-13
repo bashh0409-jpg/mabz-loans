@@ -8,8 +8,9 @@ import { useSyncExternalStore } from "react";
 const consentStorageKey = "weeverything-cookie-consent";
 
 type ConsentChoice = "accepted" | "rejected";
+type ConsentState = ConsentChoice | null | "loading";
 
-const getStoredChoice = (): ConsentChoice | null => {
+const getStoredChoice = (): ConsentState => {
   const storedChoice = window.localStorage.getItem(consentStorageKey);
 
   return storedChoice === "accepted" || storedChoice === "rejected"
@@ -31,7 +32,7 @@ const CookieConsent = () => {
   const choice = useSyncExternalStore(
     subscribeToChoice,
     getStoredChoice,
-    () => null,
+    () => "loading",
   );
 
   const saveChoice = (nextChoice: ConsentChoice) => {

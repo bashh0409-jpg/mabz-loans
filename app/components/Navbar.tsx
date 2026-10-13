@@ -2,13 +2,14 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import Link from "next/link";
 
 const LINKS = [
-  { label: "Info", href: "#requirements" },
+  { label: "Info", href: "/#requirements" },
   { label: "Privacy", href: "/privacy" },
   { label: "Terms", href: "/terms" },
-  { label: "Faq", href: "#faq" },
-  { label: "Contact", href: "#contact" },
+  { label: "Faq", href: "/#faq" },
+  { label: "Contact", href: "/#contact" },
 ] as const;
 
 const NAV_ITEM_CLASSES =
@@ -172,15 +173,15 @@ const Navbar = () => {
             : "text-white mix-blend-difference"
         }`}
       >
-        <a
-          href="#home"
+        <Link
+          href="/#home"
           className={`uppercase ${NAV_ITEM_CLASSES}`}
           aria-label="Mabz Loans"
           onClick={() => setMenuOpen(false)}
           {...navTextHandlers}
         >
           <RollingLabel label="Mabz Loans" />
-        </a>
+        </Link>
 
         <div className="hidden gap-3 md:flex">
           {LINKS.map(({ label, href }) => (
@@ -213,7 +214,7 @@ const Navbar = () => {
         ref={panelRef}
         id="mobile-navigation"
         style={PANEL_INITIAL_STYLE}
-        className="fixed top-0 left-0 z-[90] flex w-full flex-col  border-b border-[#0c0558]/10 bg-white px-4 pt-24 pb-8 text-2xl font-semibold tracking-tight text-[#0c0558] md:hidden"
+        className="fixed top-0 left-0 z-[90] flex min-h-[100dvh] w-full flex-col border-b border-[#0c0558]/10 bg-white px-4 pt-24 pb-8 text-2xl font-semibold tracking-tight text-[#0c0558] md:hidden"
       >
         {LINKS.map(({ label, href }) => (
           <a

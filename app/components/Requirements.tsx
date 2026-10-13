@@ -4,6 +4,7 @@ import React, { useEffect, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import useScrollTextReveal from "./useScrollTextReveal";
+import { BannerTicker } from "./BannerTicker";
 
 interface Requirement {
   title: string;
@@ -99,12 +100,8 @@ const Requirements = ({
         </ol>
       </div>
 
-      {/* Full-bleed banner outside the max-width wrapper so the navy runs edge to edge */}
-      <div className="w-full bg-[#0c0558] px-4 py-10 text-white md:px-8 md:py-14">
-        <p data-text-reveal className="mx-auto max-w-7xl text-[clamp(1.5rem,4.5vw,4rem)] font-semibold uppercase leading-[0.95] tracking-tighter">
-          {banner}
-        </p>
-      </div>
+      <BannerTicker />
+      
     </section>
   );
 };

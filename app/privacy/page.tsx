@@ -31,11 +31,11 @@ export default function PrivacyPage() {
               Information we may receive
             </h2>
             <p className="text-justify font-medium tracking-tight">
-              If you contact us by phone, email, or another communication method,
-              we may receive the personal information you choose to share, such as
-              your name, contact details, and any relevant enquiry information. We
-              only collect what is reasonably necessary to respond to your
-              question or request.
+              If you contact us by phone, email, or another communication
+              method, we may receive the personal information you choose to
+              share, such as your name, contact details, and any relevant
+              enquiry information. We only collect what is reasonably necessary
+              to respond to your question or request.
             </p>
           </section>
 
@@ -44,10 +44,10 @@ export default function PrivacyPage() {
               How we use information
             </h2>
             <p className="text-justify font-medium tracking-tight">
-              We use information to respond to enquiries, manage contact with you,
-              understand user needs, and improve the website experience. We do not
-              use the information on this website to make automated lending
-              decisions or to determine approval of a loan.
+              We use information to respond to enquiries, manage contact with
+              you, understand user needs, and improve the website experience. We
+              do not use the information on this website to make automated
+              lending decisions or to determine approval of a loan.
             </p>
           </section>
 
@@ -56,13 +56,13 @@ export default function PrivacyPage() {
               Website analytics and storage
             </h2>
             <p className="text-justify font-medium tracking-tight">
-              Necessary browser storage helps this website work and remembers your
-              analytics choice. If you accept analytics, we may use Vercel
-              Analytics and Vercel Speed Insights to understand website usage and
-              performance. These tools process information on our behalf. If you
-              decline, these services are not loaded. Your choice is stored in your
-              browser and can be cleared to be asked again. For information about
-              Vercel&apos;s handling of data, please see the{" "}
+              Necessary browser storage helps this website work and remembers
+              your analytics choice. If you accept analytics, we may use Vercel
+              Analytics and Vercel Speed Insights to understand website usage
+              and performance. These tools process information on our behalf. If
+              you decline, these services are not loaded. Your choice is stored
+              in your browser and can be cleared to be asked again. For
+              information about Vercel&apos;s handling of data, please see the{" "}
               <a
                 className="underline"
                 href="https://vercel.com/legal/privacy-policy"
@@ -80,11 +80,12 @@ export default function PrivacyPage() {
               Data retention and sharing
             </h2>
             <p className="text-justify font-medium tracking-tight">
-              We retain personal information only for as long as needed to handle
-              your enquiry, comply with legal or regulatory obligations, or support
-              legitimate business operations. We do not sell personal information.
-              We may share information with service providers that support our
-              website or communication processes, where necessary and appropriate.
+              We retain personal information only for as long as needed to
+              handle your enquiry, comply with legal or regulatory obligations,
+              or support legitimate business operations. We do not sell personal
+              information. We may share information with service providers that
+              support our website or communication processes, where necessary
+              and appropriate.
             </p>
           </section>
 
@@ -93,9 +94,9 @@ export default function PrivacyPage() {
               Your rights and questions
             </h2>
             <p className="text-justify font-medium tracking-tight">
-              You can decline analytics and still use the website. If you would like
-              to ask about personal information you have shared with us or request
-              a correction or deletion, please contact{" "}
+              You can decline analytics and still use the website. If you would
+              like to ask about personal information you have shared with us or
+              request a correction or deletion, please contact{" "}
               <a className="underline" href="mailto:mabzloans@gmail.com">
                 mabzloans@gmail.com
               </a>
@@ -122,22 +123,24 @@ export default function PrivacyPage() {
           </section>
         </div>
 
-        <div className="mt-10 flex flex-wrap gap-1">
+      
+
+        <div className="mt-10 flex flex-wrap gap-3">
           <Link
             href="/"
-            className="w-fit rounded-3xl border border-black/10 bg-black/[0.03] px-3 py-1.5 text-sm font-medium leading-4 tracking-tight text-[#333]"
+            className="mon geist overflow-hidden text-lg font-semibold tracking-tighter text-black "
           >
             Home
           </Link>
           <Link
             href="/terms"
-            className="w-fit rounded-3xl border border-black/10 bg-black/[0.03] px-3 py-1.5 text-sm font-medium leading-4 tracking-tight text-[#333]"
+            className="mon geist overflow-hidden text-lg font-semibold tracking-tighter text-black "
           >
             Terms
           </Link>
           <Link
             href="/cookies"
-            className="w-fit rounded-3xl border border-black/10 bg-black/[0.03] px-3 py-1.5 text-sm font-medium leading-4 tracking-tight text-[#333]"
+            className="mon geist overflow-hidden text-lg font-semibold tracking-tighter text-black "
           >
             Cookies
           </Link>

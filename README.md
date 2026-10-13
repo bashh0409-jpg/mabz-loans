@@ -44,6 +44,8 @@ npm run build
 | Privacy | `app/privacy/page.tsx` | Privacy notice |
 | Cookies | `app/cookies/page.tsx` | Cookie and analytics notice |
 | Terms | `app/terms/page.tsx` | Website terms and conditions |
+| Maintenance | `app/maintenance/page.tsx` | Standalone maintenance notice |
+| Maintenance redirect | `proxy.ts` | Sends visitors to the maintenance page when enabled |
 | Consent and analytics | `app/components/Cookies.tsx` | Consent prompt; analytics load only after acceptance |
 | Smooth scrolling | `app/components/SmoothScroll.tsx` | Lenis scrolling integrated with GSAP ScrollTrigger |
 | Global styles | `app/globals.css` | Tailwind import, global styles, and menu animation |
@@ -67,6 +69,11 @@ npm run build
 - `SmoothScroll.tsx` sets the Lenis `lerp` value. Lower values make the
   interpolation more gradual; respect the reduced-motion preference where
   adding or changing animations.
+- To temporarily send visitors to the maintenance page, set
+  `MAINTENANCE_MODE=true` in the deployment environment and redeploy. Set it to
+  `false` or remove it and redeploy to restore the site. The maintenance page
+  and required static assets remain available while the switch is on. To test
+  locally, run `MAINTENANCE_MODE=true npm run dev`.
 
 ## Deployment and ownership checklist
 
@@ -91,5 +98,5 @@ Before launch or handover, confirm:
 - Contact links work on desktop and mobile, and the consent prompt's accept and
   decline choices behave as intended.
 
-Do not commit credentials or private customer information. No environment
-variables are currently documented as required by the application.
+Do not commit credentials or private customer information. `MAINTENANCE_MODE`
+and `NEXT_PUBLIC_SITE_URL` are optional deployment environment variables.

@@ -35,8 +35,8 @@ export default function CookiesPage() {
             appear again.
           </p>
           <p className="text-justify font-medium tracking-tight">
-            This website does not use cookies to make automated lending decisions
-            and does not provide an online loan application form.
+            This website does not use cookies to make automated lending
+            decisions and does not provide an online loan application form.
           </p>
           <p className="text-justify font-medium tracking-tight">
             For additional details, please see our{" "}
@@ -51,22 +51,22 @@ export default function CookiesPage() {
           </p>
         </div>
 
-        <div className="mt-10 flex flex-wrap gap-1">
+        <div className="mt-10 flex flex-wrap gap-3">
           <Link
             href="/"
-            className="w-fit rounded-3xl border border-black/10 bg-black/[0.03] px-3 py-1.5 text-sm font-medium leading-4 tracking-tight text-[#333]"
+            className="mon geist overflow-hidden text-lg font-semibold tracking-tighter text-black "
           >
             Home
           </Link>
           <Link
             href="/privacy"
-            className="w-fit rounded-3xl border border-black/10 bg-black/[0.03] px-3 py-1.5 text-sm font-medium leading-4 tracking-tight text-[#333]"
+            className="mon geist overflow-hidden text-lg font-semibold tracking-tighter text-black "
           >
             Privacy
           </Link>
           <Link
             href="/terms"
-            className="w-fit rounded-3xl border border-black/10 bg-black/[0.03] px-3 py-1.5 text-sm font-medium leading-4 tracking-tight text-[#333]"
+            className="mon geist overflow-hidden text-lg font-semibold tracking-tighter text-black "
           >
             Terms
           </Link>
