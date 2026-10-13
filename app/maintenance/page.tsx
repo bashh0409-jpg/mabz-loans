@@ -15,7 +15,7 @@ export default function MaintenancePage() {
       >
         <div
           aria-hidden="true"
-          className="mx-auto mb-10 flex size-15 items-center justify-center rounded-full border border-white/20 bg-white/5"
+          className="mx-auto mb-10 hidden flex size-15 items-center justify-center rounded-full border border-white/20 bg-white/5"
         >
           <svg viewBox="0 0 48 48" fill="none" className="size-8 text-white">
             <path
@@ -37,7 +37,7 @@ export default function MaintenancePage() {
           shortly. For enquiries in the meantime, get in touch with us directly.
         </p>
 
-        <div className="mt-9 flex flex-wrap items-center justify-center gap-1">
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-1">
           <Link
             href="mailto:mabzloans@gmail.com"
             className="w-fit  geist capitalize max-h-7 rounded-3xl border border-white/10 bg-white px-2 py-1 text-sm font-medium leading-4 tracking-tight text-black [overflow-wrap:anywhere]"
