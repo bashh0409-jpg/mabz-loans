@@ -80,6 +80,9 @@ Before launch or handover, confirm:
 
 - The displayed phone numbers, email address, NCR registration text, and
   business identity are correct and authorized for publication.
+- Set `NEXT_PUBLIC_SITE_URL` to the canonical public site URL in deployment
+  settings so social sharing metadata uses absolute production URLs. Vercel
+  deployment URLs are used automatically when this variable is not set.
 - Hero and contact-section phone numbers match.
 - Legal notices have been checked against actual practices and reviewed by an
   appropriate South African professional.

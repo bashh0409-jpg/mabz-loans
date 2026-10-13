@@ -14,9 +14,44 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "http://localhost:3000");
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Mabz Loans | Fast Personal Finance",
   description: "Affordable loan solutions for employed and SASSA beneficiaries.",
+  openGraph: {
+    type: "website",
+    locale: "en_ZA",
+    siteName: "Mabz Loans",
+    title: "Mabz Loans | Fast Personal Finance",
+    description: "Affordable loan solutions for employed and SASSA beneficiaries.",
+    images: [
+      {
+        url: "/share-preview.jpg",
+        width: 1179,
+        height: 688,
+        alt: "Mabz Loans - your bridge to better finances",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mabz Loans | Fast Personal Finance",
+    description: "Affordable loan solutions for employed and SASSA beneficiaries.",
+    images: [
+      {
+        url: "/share-preview.jpg",
+        alt: "Mabz Loans - your bridge to better finances",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

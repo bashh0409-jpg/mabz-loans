@@ -105,11 +105,4 @@ const Contact = ({
 
 export default Contact;
 
-/*
- * Design note
- * - No contact form on purpose: there's no backend to receive it, and a form that silently
- *   fails is worse than direct tap-to-call and mailto links.
- * - Server component (no hooks), so the year in the footer is rendered on the server.
- * - Navy matches the hero, so the page opens and closes in the same colour with white
- *   sections between.
- */
+

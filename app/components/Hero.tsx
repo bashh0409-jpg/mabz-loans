@@ -143,16 +143,3 @@ const Hero = ({
 };
 
 export default Hero;
-
-/*
- * Design note
- * - pt-24/md:pt-28 clears the fixed navbar; the navbar's mix-blend-difference inverts
- *   against the navy so it stays legible without a background.
- * - The headline uses a clamp() size so three lines always fit the viewport width;
- *   at 11vw the widest line ("Your bridge") stays under ~75% of the screen.
- * - Line reveal = outer overflow-hidden mask + inner span translated with yPercent,
- *   so the motion is independent of font size.
- * - The arc uses slice + xMidYMax so it stays anchored to the bottom and crops
- *   symmetrically on narrow screens instead of squashing.
- * - Reduced-motion users skip all tweens; every element is already in its final state in CSS.
- */

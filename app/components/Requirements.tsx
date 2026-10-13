@@ -110,14 +110,3 @@ const Requirements = ({
 };
 
 export default Requirements;
-
-/*
- * Design note
- * - Cards reuse the 4/5 ratio from the earlier placeholders on desktop only; on mobile a fixed
- *   min-height avoids three very tall stacked cards.
- * - Hover inverts to the hero navy so the section visually ties back to the hero and banner.
- * - `once: true` on the ScrollTrigger means the reveal never replays on scroll-back,
- *   which would feel jittery on a content page.
- * - The banner sits outside the max-w-7xl wrapper (full bleed) but its text re-enters the
- *   same max-width, so the left edge aligns with the heading and cards above.
- */
