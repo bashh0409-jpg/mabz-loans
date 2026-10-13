@@ -34,6 +34,7 @@ const Navbar = () => {
   const links = [
     { label: "Info", href: "#requirements" },
     { label: "Privacy", href: "/privacy" },
+    { label: "Terms", href: "/terms" },
     { label: "Faq", href: "#faq" },
     { label: "Contact", href: "#contact" },
   ];

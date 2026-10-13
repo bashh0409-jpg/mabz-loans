@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { useSyncExternalStore } from "react";
 
 const consentStorageKey = "weeverything-cookie-consent";
@@ -40,7 +41,12 @@ const CookieConsent = () => {
 
   return (
     <>
-      {choice === "accepted" ? <Analytics /> : null}
+      {choice === "accepted" ? (
+        <>
+          <Analytics />
+          <SpeedInsights />
+        </>
+      ) : null}
 
       {choice === null ? (
         <aside
@@ -49,7 +55,8 @@ const CookieConsent = () => {
         >
           <p className="text-sm mon leading-4 geist tracking-tight font-medium uppercas text-[#999]">
             We use necessary <a href="/cookies" className="underline  hover:underline focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-white">cookies</a> to keep the site working. With your
-            permission, we also use privacy-friendly analytics to improve it.
+            permission, Vercel Analytics and Speed Insights help us understand
+            site usage and performance.
           </p>
           <div className="mt-4 flex flex-wrap justify-between items-center gap-2">
             <span className="gap-1 flex">

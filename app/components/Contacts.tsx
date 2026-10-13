@@ -74,17 +74,30 @@ const Contact = ({
         </div>
       </div>
 
-      <div className="mx-auto flex flex-col w-full max-w-7xl gap- px-4 py-6 justify-between md:flex-row md:justify-content md:px-8 md:text-left">
-        <p  className="text-base text-justify font-medium tracking-tight text-[#999]">
+      <div className="mx-auto flex w-full max-w-7xl flex-col justify-between gap-3 px-4 py-6 md:flex-row md:items-center md:px-8">
+        <p className="text-base text-justify font-medium tracking-tight text-[#999]">
           &copy;2026 Mabz Loans. All rights reserved.
         </p>
-        <Link
-          href="/privacy"
-          className="text-base text-justify font-medium tracking-tight underline-offset-4 hover:underline focus text-[#999]"
-        >
-          Privacy Policy
-        </Link>
-      
+        <div className="flex flex-wrap gap-x-5 gap-y-2 text-base font-medium tracking-tight text-[#999]">
+          <Link
+            href="/privacy"
+            className="underline-offset-4 hover:underline focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-white"
+          >
+            Privacy Policy
+          </Link>
+          <Link
+            href="/cookies"
+            className="underline-offset-4 hover:underline focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-white"
+          >
+            Cookie Policy
+          </Link>
+          <Link
+            href="/terms"
+            className="underline-offset-4 hover:underline focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-white"
+          >
+            Terms &amp; Conditions
+          </Link>
+        </div>
       </div>
     </section>
   );
