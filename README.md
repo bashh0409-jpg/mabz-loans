@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mabz Loans website
 
-## Getting Started
+Informational website for Mabz Loans. Visitors can learn about the service and
+contact the business by phone or email. There is no online loan application,
+lead form, or backend in this project.
 
-First, run the development server:
+## Run locally
+
+Requirements: Node.js compatible with the installed Next.js version and npm.
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project commands
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Start the local development server |
+| `npm run lint` | Run ESLint |
+| `npm run build` | Create and type-check a production build |
+| `npm run start` | Serve the production build locally (run `npm run build` first) |
 
-## Learn More
+Before handover or deployment, run:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Site map and source files
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Route / area | Source | Notes |
+| --- | --- | --- |
+| Home page | `app/page.tsx` | Composes the hero, requirements, FAQ, and contact sections |
+| Navigation | `app/components/Navbar.tsx` | Responsive navigation and animated mobile panel |
+| Hero | `app/components/Hero.tsx` | Main headline and call/email actions |
+| Requirements | `app/components/Requirements.tsx` | Document checklist and service banner |
+| FAQ | `app/components/Faq.tsx` | Editable question-and-answer accordion |
+| Contact/footer | `app/components/Contacts.tsx` | Phone, email, registration text, and legal links |
+| Privacy | `app/privacy/page.tsx` | Privacy notice |
+| Cookies | `app/cookies/page.tsx` | Cookie and analytics notice |
+| Terms | `app/terms/page.tsx` | Website terms and conditions |
+| Consent and analytics | `app/components/Cookies.tsx` | Consent prompt; analytics load only after acceptance |
+| Smooth scrolling | `app/components/SmoothScroll.tsx` | Lenis scrolling integrated with GSAP ScrollTrigger |
+| Global styles | `app/globals.css` | Tailwind import, global styles, and menu animation |
+| Static assets | `public/` | Images and other files served as-is |
 
-## Deploy on Vercel
+## Updating site content
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Update section copy and calls to action in the corresponding component under
+  `app/components/`.
+- Contact numbers and email are component defaults in both `Hero.tsx` and
+  `Contacts.tsx`. Keep them consistent when changing business contact details.
+- The footer copyright year is currently written directly in `Contacts.tsx`;
+  update it when appropriate.
+- Legal content is maintained in the three route files under `app/privacy/`,
+  `app/cookies/`, and `app/terms/`. Keep policy descriptions aligned with actual
+  data collection, storage, analytics, and business practices. Have South
+  African legal/compliance counsel review legal wording before relying on it.
+- Analytics consent is stored in the visitor's browser using local storage.
+  Visitors can change their choice by clearing this site's browser storage;
+  there is no separate preference-management screen.
+- `SmoothScroll.tsx` sets the Lenis `lerp` value. Lower values make the
+  interpolation more gradual; respect the reduced-motion preference where
+  adding or changing animations.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment and ownership checklist
+
+This repository contains the application source; confirm the production hosting
+provider, domain, and deployment settings with the current owner before making
+infrastructure changes. The project uses Next.js and includes Vercel Analytics
+and Speed Insights packages; ensure the actual deployment and consent behavior
+are verified in production.
+
+Before launch or handover, confirm:
+
+- The displayed phone numbers, email address, NCR registration text, and
+  business identity are correct and authorized for publication.
+- Hero and contact-section phone numbers match.
+- Legal notices have been checked against actual practices and reviewed by an
+  appropriate South African professional.
+- The production domain, hosting account, analytics access, and repository
+  access are transferred to the intended owner.
+- Contact links work on desktop and mobile, and the consent prompt's accept and
+  decline choices behave as intended.
+
+Do not commit credentials or private customer information. No environment
+variables are currently documented as required by the application.

@@ -18,10 +18,10 @@ const useIsoLayoutEffect =
 
 const Hero = ({
   eyebrow = "Your bridge to better finances",
-  
+
   lines = ["Need cash", "fast? We've", "got you!"],
   description = "Tell us what you need. Call or email and we'll walk you through the options.",
-  phone = "08123456789",
+  phone = "078 219 3521",
   email = "mabzloans@gmail.com",
 }: HeroProps) => {
   const sectionRef = useRef<HTMLElement>(null);
