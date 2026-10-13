@@ -45,11 +45,11 @@ const Requirements = ({
     // Reduced-motion users skip the tween entirely; CSS already shows the final state
     mm.add("(prefers-reduced-motion: no-preference)", () => {
       gsap.from(q("[data-card]"), {
-        y: 48,
+        y: 88,
         opacity: 0,
         duration: 0.9,
         ease: "power3.out",
-        stagger: 0.12,
+        stagger: 0.18,
         scrollTrigger: { trigger: section, start: "top 70%", once: true },
       });
     });

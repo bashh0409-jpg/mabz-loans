@@ -114,7 +114,7 @@ const Faq = ({ heading = "Questions", items = DEFAULT_ITEMS }: FaqProps) => {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="text-xl pb-6 leading-5  text-justify font-medium tracking-tight text-[#999]">
+                    <p className="text-lg pb-6 leading-5  text-justify font-medium tracking-tight text-[#999]">
                       {answer}
                     </p>
                   </div>
