@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function MaintenancePage() {
   return (
-    <main className="flex min-h-svh items-center justify-center bg-[#0c0558] px-6 py-24 text-white">
+    <main className="fixed inset-0 z-0 flex min-h-dvh items-center justify-center overflow-y-auto bg-[#0c0558] px-6 py-24 text-white">
       <section
         aria-labelledby="maintenance-title"
         className="w-full max-w-2xl items-center justify-center text-center"
