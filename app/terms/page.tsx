@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function TermsPage() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-white px-6 py-16 text-[#0c0558]">
-      <article className="w-full max-w-2xl">
+      <article className="w-full mt-15 max-w-2xl">
         <p className="text-base uppercase capitalize text-justify font-medium tracking-tight text-[#999]">
           Mabz Loans
         </p>
@@ -128,7 +128,7 @@ export default function TermsPage() {
           </section>
         </div>
 
-        <div className="mt-10 flex flex-wrap gap-3">
+        <div className="mt-10 flex flex-wrap gap-1">
           <Link
             href="/"
             className="w-fit rounded-3xl border border-black/10 bg-black/[0.03] px-3 py-1.5 text-sm font-medium leading-4 tracking-tight text-[#333]"
@@ -140,6 +140,12 @@ export default function TermsPage() {
             className="w-fit rounded-3xl border border-black/10 bg-black/[0.03] px-3 py-1.5 text-sm font-medium leading-4 tracking-tight text-[#333]"
           >
             Privacy
+          </Link>
+          <Link
+            href="/cookies"
+            className="w-fit rounded-3xl border border-black/10 bg-black/[0.03] px-3 py-1.5 text-sm font-medium leading-4 tracking-tight text-[#333]"
+          >
+            Cookies 
           </Link>
         </div>
       </article>
