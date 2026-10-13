@@ -71,9 +71,11 @@ npm run build
   adding or changing animations.
 - To temporarily send visitors to the maintenance page, set
   `MAINTENANCE_MODE=true` in the deployment environment and redeploy. Set it to
-  `false` or remove it and redeploy to restore the site. The maintenance page
-  and required static assets remain available while the switch is on. To test
-  locally, run `MAINTENANCE_MODE=true npm run dev`.
+  `false` or remove it and redeploy to restore the site. Direct visits to
+  `/maintenance` redirect to the home page when maintenance mode is off. The
+  maintenance page, legal pages, and required static assets remain available
+  while the switch is on. To test locally, run
+  `MAINTENANCE_MODE=true npm run dev`.
 
 ## Deployment and ownership checklist
 

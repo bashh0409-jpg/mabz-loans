@@ -1,11 +1,18 @@
 import { NextResponse, type NextRequest } from "next/server";
 
 export function proxy(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+  const isMaintenanceRoute =
+    pathname === "/maintenance" || pathname.startsWith("/maintenance/");
+
   if (process.env.MAINTENANCE_MODE !== "true") {
+    if (isMaintenanceRoute) {
+      return NextResponse.redirect(new URL("/", request.url), 307);
+    }
+
     return NextResponse.next();
   }
 
-  const { pathname } = request.nextUrl;
   const allowedInMaintenance = [
     "/maintenance",
     "/terms",
@@ -18,7 +25,7 @@ export function proxy(request: NextRequest) {
     pathname.startsWith("/_next/") ||
     /\.[^/]+$/.test(pathname);
 
-  if (isAllowedPath || pathname.startsWith("/maintenance/")) {
+  if (isAllowedPath || isMaintenanceRoute) {
     return NextResponse.next();
   }
 
