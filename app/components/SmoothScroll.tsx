@@ -11,6 +11,7 @@ export default function SmoothScroll() {
   useEffect(() => {
     const lenis = new Lenis({
       anchors: { offset: -80 },
+      lerp: 0.07,
     });
     const updateScrollTrigger = () => ScrollTrigger.update();
     const updateLenis = (time: number) => lenis.raf(time * 1000);
