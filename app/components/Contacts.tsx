@@ -98,7 +98,7 @@ const Contact = ({
             Terms &amp; Conditions
           </Link>
           <a
-            href="mailto:bashh0409@gmail.com"
+            href="mailto:bashh0409@gmail.com?subject=New%20project%20enquiry"
             className="underline-offset-4 tracking-tight hover:underline focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-white"
           >
             TheWiseStudio
