@@ -19,6 +19,7 @@ const DEFAULT_ITEMS: Requirement[] = [
   { title: "South African Original ID" },
   { title: "3-Month Bank Statement" },
   { title: "Your Latest Payslip" },
+  { title: "employed or SASSA beneficiaries" },
 ];
 
 gsap.registerPlugin(ScrollTrigger);
@@ -63,7 +64,7 @@ const Requirements = ({
       aria-labelledby="requirements-heading"
       className="w-full bg-white text-black"
     >
-      <div className="mx-auto flex max-w-7xl flex-col gap-10 px-4 py-20 md:gap-16 md:px-8 md:py-32">
+      <div className="mx-auto flex  flex-col gap-10 px-4 py-20 md:gap-16 md:px-8 md:py-32">
         <div className="flex flex-col  gap-y-4">
           <h2
             id="requirements-heading"
@@ -78,7 +79,7 @@ const Requirements = ({
         </div>
 
         {/* ol because the order is the checklist; 1 col phone, 3 cols from md */}
-        <ol className="grid grid-cols-1 gap-4 md:grid-cols-3">
+        <ol className="grid grid-cols-1 gap-4 md:grid-cols-4">
           {items.map(({ title }, i) => (
             <li
               key={title}
