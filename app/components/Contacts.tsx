@@ -10,7 +10,7 @@ interface ContactProps {
 }
 
 const Contact = ({
-  phones = ["078 2193 521", "082 891 4983"],
+  phones = ["078 219 3521", "082 891 4983"],
   email = "mabzloans@gmail.com",
 }: ContactProps) => {
   const sectionRef = useScrollTextReveal<HTMLElement>();
