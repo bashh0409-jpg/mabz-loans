@@ -2,15 +2,15 @@ import Link from "next/link";
 
 export default function TermsPage() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-white px-6 py-16 text-[#0c0558]">
+    <main className="flex min-h-screen items-center justify-center bg-white px-6 py-16 text-[#003b70]">
       <article className="w-full mt-15 max-w-2xl">
-        <p className="text-base uppercase capitalize text-justify font-medium tracking-tight text-[#999]">
+        <p className="text-base uppercase capitalize text-justify font-semibold tracking-tight text-[#ff8500]">
           Mabz Loans
         </p>
-        <p className="text-sm text-justify font-medium tracking-tight text-[#999]">
+        <p className="text-sm text-justify font-medium tracking-tight text-[#52687d]">
           NCR Registered - CP21885
         </p>
-        <h1 className="mt-10 mb-4 text-5xl tracking-tighter font-semibold text-[#0c0558]">
+        <h1 className="mt-10 mb-4 text-5xl tracking-tighter font-semibold text-[#003b70]">
           Terms &amp; conditions
         </h1>
 
@@ -26,7 +26,7 @@ export default function TermsPage() {
           </p>
 
           <section>
-            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-black">
+            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-[#003b70]">
               Informational website only
             </h2>
             <p className="text-justify font-medium tracking-tight">
@@ -39,7 +39,7 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-black">
+            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-[#003b70]">
               Contact and enquiries
             </h2>
             <p className="text-justify font-medium tracking-tight">
@@ -52,7 +52,7 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-black">
+            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-[#003b70]">
               Website content
             </h2>
             <p className="text-justify font-medium tracking-tight">
@@ -65,7 +65,7 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-black">
+            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-[#003b70]">
               Intellectual property
             </h2>
             <p className="text-justify font-medium tracking-tight">
@@ -78,7 +78,7 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-black">
+            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-[#003b70]">
               Third-party services
             </h2>
             <p className="text-justify font-medium tracking-tight">
@@ -98,7 +98,7 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-black">
+            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-[#003b70]">
               Limitation of liability
             </h2>
             <p className="text-justify font-medium tracking-tight">
@@ -111,7 +111,7 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-black">
+            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-[#003b70]">
               Governing law
             </h2>
             <p className="text-justify font-medium tracking-tight">
@@ -123,7 +123,7 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-black">
+            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-[#003b70]">
               Questions
             </h2>
             <p className="text-justify font-medium tracking-tight">
@@ -139,19 +139,19 @@ export default function TermsPage() {
         <div className="mt-10 flex flex-wrap gap-3">
           <Link
             href="/"
-            className="mon geist overflow-hidden text-lg font-semibold tracking-tighter text-black "
+            className="mon geist overflow-hidden text-lg font-semibold tracking-tighter text-[#003b70] hover:text-[#ff8500]"
           >
             Home
           </Link>
           <Link
             href="/privacy"
-            className="mon geist overflow-hidden text-lg font-semibold tracking-tighter text-black "
+            className="mon geist overflow-hidden text-lg font-semibold tracking-tighter text-[#003b70] hover:text-[#ff8500]"
           >
             Privacy
           </Link>
           <Link
             href="/cookies"
-            className="mon geist overflow-hidden text-lg font-semibold tracking-tighter text-black "
+            className="mon geist overflow-hidden text-lg font-semibold tracking-tighter text-[#003b70] hover:text-[#ff8500]"
           >
             Cookies
           </Link>

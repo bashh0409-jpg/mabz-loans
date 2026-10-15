@@ -74,7 +74,7 @@ export const BannerTicker = forwardRef<HTMLDivElement, BannerTickerProps>(
     return (
       <div
         ref={ref}
-        className={`w-full overflow-hidden bg-[#0c0558] py-10 text-white md:py-14 ${className}`}
+        className={`w-full overflow-hidden bg-[#ff8500] py-10 text-[#003b70] md:py-14 ${className}`}
       >
         <div
           ref={trackRef}

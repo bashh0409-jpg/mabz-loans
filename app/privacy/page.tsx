@@ -2,15 +2,15 @@ import Link from "next/link";
 
 export default function PrivacyPage() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-white px-6 py-16 text-[#0c0558]">
+    <main className="flex min-h-screen items-center justify-center bg-white px-6 py-16 text-[#003b70]">
       <article className="w-full mt-15 max-w-2xl">
-        <p className="text-base uppercase capitalize text-justify font-medium tracking-tight text-[#999]">
+        <p className="text-base uppercase capitalize text-justify font-semibold tracking-tight text-[#ff8500]">
           Mabz Loans
         </p>
-        <p className="text-sm text-justify font-medium tracking-tight text-[#999]">
+        <p className="text-sm text-justify font-medium tracking-tight text-[#52687d]">
           NCR Registered - CP21885
         </p>
-        <h1 className="mt-10 mb-4 text-5xl tracking-tighter font-semibold text-[#0c0558]">
+        <h1 className="mt-10 mb-4 text-5xl tracking-tighter font-semibold text-[#003b70]">
           Privacy policy
         </h1>
 
@@ -27,7 +27,7 @@ export default function PrivacyPage() {
           </p>
 
           <section>
-            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-black">
+            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-[#003b70]">
               Information we may receive
             </h2>
             <p className="text-justify font-medium tracking-tight">
@@ -40,7 +40,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-black">
+            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-[#003b70]">
               How we use information
             </h2>
             <p className="text-justify font-medium tracking-tight">
@@ -52,7 +52,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-black">
+            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-[#003b70]">
               Website analytics and storage
             </h2>
             <p className="text-justify font-medium tracking-tight">
@@ -76,7 +76,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-black">
+            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-[#003b70]">
               Data retention and sharing
             </h2>
             <p className="text-justify font-medium tracking-tight">
@@ -90,7 +90,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-black">
+            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-[#003b70]">
               Your rights and questions
             </h2>
             <p className="text-justify font-medium tracking-tight">
@@ -106,7 +106,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-black">
+            <h2 className="mb-2 text-xl font-semibold tracking-tighter text-[#003b70]">
               Related policies
             </h2>
             <p className="text-justify font-medium tracking-tight">
@@ -128,19 +128,19 @@ export default function PrivacyPage() {
         <div className="mt-10 flex flex-wrap gap-3">
           <Link
             href="/"
-            className="mon geist overflow-hidden text-lg font-semibold tracking-tighter text-black "
+            className="mon geist overflow-hidden text-lg font-semibold tracking-tighter text-[#003b70] hover:text-[#ff8500]"
           >
             Home
           </Link>
           <Link
             href="/terms"
-            className="mon geist overflow-hidden text-lg font-semibold tracking-tighter text-black "
+            className="mon geist overflow-hidden text-lg font-semibold tracking-tighter text-[#003b70] hover:text-[#ff8500]"
           >
             Terms
           </Link>
           <Link
             href="/cookies"
-            className="mon geist overflow-hidden text-lg font-semibold tracking-tighter text-black "
+            className="mon geist overflow-hidden text-lg font-semibold tracking-tighter text-[#003b70] hover:text-[#ff8500]"
           >
             Cookies
           </Link>

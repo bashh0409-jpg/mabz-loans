@@ -22,10 +22,10 @@ const Contact = ({
       ref={sectionRef}
       id="contact"
       aria-labelledby="contact-heading"
-      className="w-full bg-[#0c0558] text-white"
+      className="w-full bg-[#ff8500] text-[#003b70]"
     >
       <div className="mx-auto flex max-w-7xl flex-col gap-12 px-4 py-20 md:gap-20 md:px-8 md:py-32">
-        <p className="text-sm text-justify font-medium tracking-tight text-[#999]">
+        <p className="text-sm text-justify font-semibold tracking-tight text-[#003b70]">
           NCR Registered - CP21885
         </p>
         <h2
@@ -75,10 +75,10 @@ const Contact = ({
       </div>
 
       <div className="mx-auto flex w-full max-w-7xl flex-col justify-between gap-3 px-4 py-6 md:flex-row md:items-center md:px-8">
-        <p className="text-base text-justify font-medium tracking-tight text-white">
+        <p className="text-base text-justify font-medium tracking-tight text-[#003b70]">
           &copy;2026 Mabz Loans. All rights reserved.
         </p>
-        <div className="flex flex-wrap gap-x-5 gap-y-2 text-base font-medium tracking-tight text-white">
+        <div className="flex flex-wrap gap-x-5 gap-y-2 text-base font-medium tracking-tight text-[#003b70]">
           <Link
             href="/privacy"
             className="underline-offset-4 hover:underline focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-white"

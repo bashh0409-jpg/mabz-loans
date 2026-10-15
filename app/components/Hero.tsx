@@ -59,12 +59,12 @@ const Hero = ({
     <section
       ref={sectionRef}
       id="home"
-      className="relative isolate flex min-h-[100dvh] w-full flex-col justify-between overflow-hidden bg-[#0c0558] px-4 pb-6 pt-24 text-white md:pt-28"
+      className="relative isolate flex min-h-[100dvh] w-full flex-col justify-between overflow-hidden bg-[#003b70] px-4 pb-6 pt-24 text-white md:pt-28"
     >
       {/* Soft top-right glow for depth; purely decorative */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_85%_5%,rgba(110,90,255,0.35),transparent_55%)]"
+        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_85%_5%,rgb(208, 121, 28),transparent_55%)]"
       />
 
       {/* The "bridge": a single arc drawn behind the headline */}
@@ -80,7 +80,7 @@ const Hero = ({
           data-arc
           d="M0,400 C300,40 900,40 1200,400"
           fill="none"
-          stroke="rgba(255,255,255,0.25)"
+          stroke="rgba(255,133,0,0.7)"
           strokeWidth="1.5"
           pathLength={1}
           strokeDasharray={1}
@@ -125,13 +125,13 @@ const Hero = ({
           >
             <a
               href={`tel:${phone}`}
-              className="bg-white px-5 py-3 text-[#0c0558] transition-colors hover:bg-white/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="bg-[#ff8500] px-5 py-3 text-[#003b70] transition-colors hover:bg-[#ff9d2e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Call us
             </a>
             <a
               href={`mailto:${email}`}
-              className="border border-white/40 px-5 py-3 transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="border border-white/40 hover:border-[#ff9d2e] hover:text-[#003b70] px-5 py-3 transition-colors hover:bg-[#ff9d2e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Email us
             </a>

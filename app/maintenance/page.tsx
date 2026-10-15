@@ -8,14 +8,15 @@ export const metadata: Metadata = {
 
 export default function MaintenancePage() {
   return (
-    <main className="pointer-events-none fixed inset-0 z-0 flex min-h-dvh items-center justify-center overflow-y-auto bg-[#0c0558] px-6 py-24 text-white">
+    <main className="pointer-events-none fixed inset-0 z-0 flex min-h-dvh items-center justify-center overflow-y-auto bg-[#003b70] px-6 py-24 text-white">
       <section
         aria-labelledby="maintenance-title"
         className="pointer-events-auto w-full max-w-2xl items-center justify-center text-center"
       >
+        <div aria-hidden="true" className="mx-auto mb-6 h-1 w-20 bg-[#ff8500]" />
         <div
           aria-hidden="true"
-          className="mx-auto mb-10 hidden flex size-15 items-center justify-center rounded-full border border-white/20 bg-white/5"
+          className="mx-auto mb-10 hidden flex size-15 items-center justify-center rounded-full border border-[#ff8500]/50 bg-[#ff8500]/10"
         >
           <svg viewBox="0 0 48 48" fill="none" className="size-8 text-white">
             <path
@@ -28,26 +29,28 @@ export default function MaintenancePage() {
           </svg>
         </div>
 
-        <p className="mon geist -mt-4 mx-auto  max-w-xs text-center  overflow-hidden text-xl font-semibold tracking-tighter text-blac mb-2 ">
+        <h1
+          id="maintenance-title"
+          className="mon geist -mt-4 mx-auto mb-2 max-w-xs overflow-hidden text-center text-xl font-semibold tracking-tighter text-white"
+        >
           We&apos;ll be back soon
-        </p>
+        </h1>
 
-        <p className="geist  max-w-xs mx-auto text-center  overflow-hidden text-[13px] font-semibold leading-3 tracking-tight text-[#999]">
+        <p className="geist mx-auto max-w-xs overflow-hidden text-center text-[13px] font-semibold leading-4 tracking-tight text-white/75">
           We&apos;re making a few improvements to our website. Please check back
           shortly. For enquiries in the meantime, get in touch with us directly.
         </p>
 
-        <div className="mt-3 flex flex-wrap items-center justify-center gap-1">
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
           <Link
             href="mailto:mabzloans@gmail.com"
-            className="w-fit  geist capitalize max-h-7 rounded-3xl border border-white/10 bg-white px-2 py-1 text-sm font-medium leading-4 tracking-tight text-black [overflow-wrap:anywhere]"
+            className="geist max-h-8 w-fit rounded-3xl border border-[#ff8500] bg-[#ff8500] px-3 py-1.5 text-sm font-semibold leading-4 tracking-tight text-[#003b70] transition-colors hover:bg-[#ff9a2e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white [overflow-wrap:anywhere]"
           >
             Email us
           </Link>
           <Link
             href="tel:0782193521"
-            
-            className="w-fit  geist capitalize max-h-7 rounded-3xl border border-white/10 bg-white px-2 py-1 text-sm font-medium leading-4 tracking-tight text-black [overflow-wrap:anywhere]"
+            className="geist max-h-8 w-fit rounded-3xl border border-[#ff8500] bg-[#ff8500] px-3 py-1.5 text-sm font-semibold leading-4 tracking-tight text-[#003b70] transition-colors hover:bg-[#ff9a2e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white [overflow-wrap:anywhere]"
           >
             Call us
           </Link>

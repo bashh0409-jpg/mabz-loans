@@ -33,6 +33,11 @@ const DEFAULT_ITEMS: FaqItem[] = [
     answer:
       "The cost depends on the amount you borrow and how long you take to repay it. Contact us for a quote.",
   },
+  {
+    question: "Where can I find Mabz Loans located?",
+    answer:
+      "Mabz Loans is currently located at Office No.1, Old Eskom Building, King Street, Butterworth, 4960.",
+  },
 ];
 
 const Faq = ({ heading = "Questions", items = DEFAULT_ITEMS }: FaqProps) => {
@@ -50,7 +55,7 @@ const Faq = ({ heading = "Questions", items = DEFAULT_ITEMS }: FaqProps) => {
       ref={sectionRef}
       id="faq"
       aria-labelledby="faq-heading"
-      className="w-full bg-white text-black"
+      className="w-full bg-white text-[#003b70]"
     >
       <div className="mx-auto grid max-w-7xl grid-cols-12 gap-y-10 px-4 py-20 md:px-8 md:py-32">
         <h2
@@ -70,7 +75,7 @@ const Faq = ({ heading = "Questions", items = DEFAULT_ITEMS }: FaqProps) => {
             return (
               <li
                 key={question}
-                className="border-t border-black/15 last:border-b"
+                className="border-t border-[#003b70]/15 last:border-b"
               >
                 <h3>
                   <button
@@ -80,7 +85,7 @@ const Faq = ({ heading = "Questions", items = DEFAULT_ITEMS }: FaqProps) => {
                     aria-expanded={isOpen}
                     aria-controls={panelId}
                     onClick={() => toggle(i)}
-                    className="flex w-full cursor-pointer items-center justify-between gap-6 py-6 text-left text-[clamp(1.25rem,2.6vw,2rem)] font-semibold uppercas leading-none tracking-tighter focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0c0558]"
+                    className="flex w-full cursor-pointer items-center justify-between gap-6 py-6 text-left text-[clamp(1.25rem,2.6vw,2rem)] font-semibold uppercas leading-none tracking-tighter focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff8500]"
                   >
                     <span>{question}</span>
                     {/* Decorative: rotating the + 45deg turns it into an x without a second icon */}
@@ -95,7 +100,7 @@ const Faq = ({ heading = "Questions", items = DEFAULT_ITEMS }: FaqProps) => {
                         height="24px"
                         viewBox="0 -960 960 960"
                         width="24px"
-                        fill="#000"
+                        fill="#003b70"
                       >
                         <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
                       </svg>
@@ -114,7 +119,7 @@ const Faq = ({ heading = "Questions", items = DEFAULT_ITEMS }: FaqProps) => {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="text-lg pb-6 leading-5  text-justify font-medium tracking-tight text-[#999]">
+                    <p className="pb-6 text-justify text-lg font-medium leading-5 tracking-tight text-[#52687d]">
                       {answer}
                     </p>
                   </div>

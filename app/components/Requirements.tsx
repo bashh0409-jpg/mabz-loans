@@ -62,7 +62,7 @@ const Requirements = ({
       ref={sectionRef}
       id="requirements"
       aria-labelledby="requirements-heading"
-      className="w-full bg-white text-black"
+      className="w-full bg-white text-[#003b70]"
     >
       <div className="mx-auto flex  flex-col gap-10 px-4 py-20 md:gap-16 md:px-8 md:py-32">
         <div className="flex flex-col  gap-y-4">
@@ -75,7 +75,7 @@ const Requirements = ({
           </h2>
           <p
             data-text-reveal
-            className="col-span-12 text-md leading-5 font-semibold uppercas tracking-tight max-w-md text-black/60 md:col-span-4"
+            className="col-span-12 max-w-md text-md leading-5 font-semibold uppercas tracking-tight text-[#003b70]/65 md:col-span-4"
           >
             Bring these three documents to your appointment and we can get
             started.
@@ -89,10 +89,10 @@ const Requirements = ({
               key={title}
               data-card
               // group lets the number and title restyle together when the card is hovered or focused
-              className="group flex min-h-[16rem] flex-col justify-between bg-black/5 p-5 transition-colors duration-300 hover:bg-[#0c0558] hover:text-white md:aspect-[4/5] md:min-h-0"
+              className="group flex min-h-[16rem] flex-col justify-between bg-[#003b70]/5 p-5 transition-colors duration-300 hover:bg-[#003b70] hover:text-white md:aspect-[4/5] md:min-h-0"
             >
               {/* padStart keeps numerals aligned as 01, 02, 03 */}
-              <span className="text-sm font-semibold tracking-tight text-black/50 transition-colors group-hover:text-white/60">
+              <span className="text-sm font-semibold tracking-tight text-[#003b70]/50 transition-colors group-hover:text-[#ff9d2e]">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <span className="text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold uppercase leading-[0.95] tracking-tighter">

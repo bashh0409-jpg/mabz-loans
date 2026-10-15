@@ -16,11 +16,11 @@
 :root {
   --background: #fafafa;
   --foreground: #f5f6f7;
-  --navy: #0f4b7a;
-  --navy-deep: #0a3b5d;
-  --orange: #f8a528;
-  --orange-deep: #ee8f16;
-  --orange-soft: #f9b647;
+  --navy: #003b70;
+  --navy-deep: #002b52;
+  --orange: #ff8500;
+  --orange-deep: #e87000;
+  --orange-soft: #ff9d2e;
   --white: #f6f8fb;
   --shadow: rgba(0, 0, 0, 0.26);
 }
@@ -33,7 +33,7 @@
 }
 
 .orange {
-  background-color: #ee8f16 ;
+  background-color: var(--orange-deep);
 }
 
 * {

@@ -52,9 +52,9 @@ const CookieConsent = () => {
       {choice === null ? (
         <aside
           aria-label="Cookie consent"
-          className="fixed inset-x-4 bottom-4 rounded-2xl z-[60] border border-black/15 bg-white p-2 shadow-[0_18px_60px_rgb(0_0_0/18%)] sm:inset-x-auto sm:bottom-6 sm:left-6 sm:max-w-sm"
+          className="fixed inset-x-4 bottom-4 z-[60] rounded-2xl border border-[#003b70]/15 bg-white p-2 shadow-[0_18px_60px_rgb(0_0_0/18%)] sm:inset-x-auto sm:bottom-6 sm:left-6 sm:max-w-sm"
         >
-          <p className="text-sm mon leading-4 geist tracking-tight font-medium uppercas text-[#999]">
+          <p className="text-sm mon geist leading-4 font-medium tracking-tight uppercas text-[#52687d]">
             We use necessary <a href="/cookies" className="underline  hover:underline focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-white">cookies</a> to keep the site working. With your
             permission, Vercel Analytics and Speed Insights help us understand
             site usage and performance.
@@ -64,21 +64,21 @@ const CookieConsent = () => {
               <button
                 type="button"
                 onClick={() => saveChoice("accepted")}
-                className="w-fit  geist cursor-pointer capitalize max-h-7 rounded-3xl border border-black/10 bg-black/[0.03] px-2 py-1 text-sm font-medium leading-4 tracking-tight text-[#333] [overflow-wrap:anywhere]"
+                className="geist max-h-7 w-fit cursor-pointer rounded-3xl border border-[#ff8500] bg-[#ff8500] px-2 py-1 text-sm font-semibold leading-4 tracking-tight text-[#003b70] [overflow-wrap:anywhere]"
               >
                 Accept
               </button>
               <button
                 type="button"
                 onClick={() => saveChoice("rejected")}
-                className="w-fit  geist cursor-pointer capitalize max-h-7 rounded-3xl border border-black/10 bg-black/[0.03] px-2 py-1 text-sm font-medium leading-4 tracking-tight text-[#333] [overflow-wrap:anywhere]"
+                className="geist max-h-7 w-fit cursor-pointer rounded-3xl border border-[#003b70]/25 bg-[#003b70]/5 px-2 py-1 text-sm font-semibold leading-4 tracking-tight text-[#003b70] [overflow-wrap:anywhere]"
               >
                 Decline
               </button>
             </span>
             <Link
               href="/cookies"
-              className="w-fit  geist cursor-pointer capitalize max-h-7 rounded-3xl border border-black/10 bg-black/[0.03] px-2 py-1 text-sm font-medium leading-4 tracking-tight text-[#333] [overflow-wrap:anywhere]"
+              className="geist max-h-7 w-fit cursor-pointer rounded-3xl border border-[#003b70]/25 bg-[#003b70]/5 px-2 py-1 text-sm font-semibold leading-4 tracking-tight text-[#003b70] [overflow-wrap:anywhere]"
             >
               Learn more
             </Link>
