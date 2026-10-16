@@ -1,6 +1,6 @@
-# Mabz Loans website
+# Mabz Cash Loans website
 
-Informational website for Mabz Loans. Visitors can learn about the service and
+Informational website for Mabz Cash Loans. Visitors can learn about the service and
 contact the business by phone or email. There is no online loan application,
 lead form, or backend in this project.
 
@@ -17,11 +17,11 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Project commands
 
-| Command | Purpose |
-| --- | --- |
-| `npm run dev` | Start the local development server |
-| `npm run lint` | Run ESLint |
-| `npm run build` | Create and type-check a production build |
+| Command         | Purpose                                                        |
+| --------------- | -------------------------------------------------------------- |
+| `npm run dev`   | Start the local development server                             |
+| `npm run lint`  | Run ESLint                                                     |
+| `npm run build` | Create and type-check a production build                       |
 | `npm run start` | Serve the production build locally (run `npm run build` first) |
 
 Before handover or deployment, run:
@@ -33,23 +33,23 @@ npm run build
 
 ## Site map and source files
 
-| Route / area | Source | Notes |
-| --- | --- | --- |
-| Home page | `app/page.tsx` | Composes the hero, requirements, FAQ, and contact sections |
-| Navigation | `app/components/Navbar.tsx` | Responsive navigation and animated mobile panel |
-| Hero | `app/components/Hero.tsx` | Main headline and call/email actions |
-| Requirements | `app/components/Requirements.tsx` | Document checklist and service banner |
-| FAQ | `app/components/Faq.tsx` | Editable question-and-answer accordion |
-| Contact/footer | `app/components/Contacts.tsx` | Phone, email, registration text, and legal links |
-| Privacy | `app/privacy/page.tsx` | Privacy notice |
-| Cookies | `app/cookies/page.tsx` | Cookie and analytics notice |
-| Terms | `app/terms/page.tsx` | Website terms and conditions |
-| Maintenance | `app/maintenance/page.tsx` | Standalone maintenance notice |
-| Maintenance redirect | `proxy.ts` | Sends visitors to the maintenance page when enabled |
-| Consent and analytics | `app/components/Cookies.tsx` | Consent prompt; analytics load only after acceptance |
-| Smooth scrolling | `app/components/SmoothScroll.tsx` | Lenis scrolling integrated with GSAP ScrollTrigger |
-| Global styles | `app/globals.css` | Tailwind import, global styles, and menu animation |
-| Static assets | `public/` | Images and other files served as-is |
+| Route / area          | Source                            | Notes                                                      |
+| --------------------- | --------------------------------- | ---------------------------------------------------------- |
+| Home page             | `app/page.tsx`                    | Composes the hero, requirements, FAQ, and contact sections |
+| Navigation            | `app/components/Navbar.tsx`       | Responsive navigation and animated mobile panel            |
+| Hero                  | `app/components/Hero.tsx`         | Main headline and call/email actions                       |
+| Requirements          | `app/components/Requirements.tsx` | Document checklist and service banner                      |
+| FAQ                   | `app/components/Faq.tsx`          | Editable question-and-answer accordion                     |
+| Contact/footer        | `app/components/Contacts.tsx`     | Phone, email, registration text, and legal links           |
+| Privacy               | `app/privacy/page.tsx`            | Privacy notice                                             |
+| Cookies               | `app/cookies/page.tsx`            | Cookie and analytics notice                                |
+| Terms                 | `app/terms/page.tsx`              | Website terms and conditions                               |
+| Maintenance           | `app/maintenance/page.tsx`        | Standalone maintenance notice                              |
+| Maintenance redirect  | `proxy.ts`                        | Sends visitors to the maintenance page when enabled        |
+| Consent and analytics | `app/components/Cookies.tsx`      | Consent prompt; analytics load only after acceptance       |
+| Smooth scrolling      | `app/components/SmoothScroll.tsx` | Lenis scrolling integrated with GSAP ScrollTrigger         |
+| Global styles         | `app/globals.css`                 | Tailwind import, global styles, and menu animation         |
+| Static assets         | `public/`                         | Images and other files served as-is                        |
 
 ## Updating site content
 

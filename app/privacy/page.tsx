@@ -5,7 +5,7 @@ export default function PrivacyPage() {
     <main className="flex min-h-screen items-center justify-center bg-white px-6 py-16 text-[#003b70]">
       <article className="w-full mt-15 max-w-2xl">
         <p className="text-base uppercase capitalize text-justify font-semibold tracking-tight text-[#ff8500]">
-          Mabz Loans
+          Mabz cash Loans
         </p>
         <p className="text-sm text-justify font-medium tracking-tight text-[#52687d]">
           NCR Registered - CP21885
@@ -20,9 +20,9 @@ export default function PrivacyPage() {
 
         <div className="mt-8 space-y-6 text-base leading-6 text-[#999]">
           <p className="text-justify font-medium tracking-tight">
-            This Privacy Policy explains how Mabz Loans handles information when
-            you visit this website, contact us, or otherwise interact with our
-            online presence. This website is informational only and does not
+            This Privacy Policy explains how Mabz Cash Loans handles information
+            when you visit this website, contact us, or otherwise interact with
+            our online presence. This website is informational only and does not
             provide an online loan application form or a binding credit offer.
           </p>
 
@@ -122,8 +122,6 @@ export default function PrivacyPage() {
             </p>
           </section>
         </div>
-
-      
 
         <div className="mt-10 flex flex-wrap gap-3">
           <Link

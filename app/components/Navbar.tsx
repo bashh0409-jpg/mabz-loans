@@ -176,7 +176,7 @@ const Navbar = () => {
         <Link
           href="/#home"
           className={`uppercase ${NAV_ITEM_CLASSES}`}
-          aria-label="Mabz Loans"
+          aria-label="Mabz Cash Loans"
           onClick={() => setMenuOpen(false)}
           {...navTextHandlers}
         >
@@ -220,7 +220,6 @@ const Navbar = () => {
           <a
             key={label}
             href={href}
-            
             className={`uppercase ${NAV_ITEM_CLASSES}`}
             aria-label={label}
             onClick={() => setMenuOpen(false)}

@@ -5,7 +5,7 @@ export default function CookiesPage() {
     <main className="flex min-h-screen items-center justify-center bg-white px-6 py-16 text-[#003b70]">
       <article className="w-full mt-15 max-w-2xl">
         <p className="text-base uppercase capitalize text-justify font-semibold tracking-tight text-[#ff8500]">
-          Mabz Loans
+          Mabz cash Loans
         </p>
         <p className="text-sm text-justify font-medium tracking-tight text-[#52687d]">
           NCR Registered - CP21885
@@ -14,11 +14,11 @@ export default function CookiesPage() {
           Cookie policy
         </h1>
 
-        <p className="text-base text-justify font-medium tracking-tight text-[#52687d]">
+        <p className="text-base text-justify font-medium tracking-tight text-[#999]">
           Last Updated: 2026-10-13
         </p>
 
-        <div className="mt-8 space-y-6 text-base leading-6 text-[#52687d]">
+        <div className="mt-8 space-y-6 text-base leading-6 text-[#999]">
           <p className="text-justify font-medium tracking-tight">
             We use necessary browser storage to keep this website working and to
             remember your analytics choice.

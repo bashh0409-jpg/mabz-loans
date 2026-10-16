@@ -5,7 +5,7 @@ export default function TermsPage() {
     <main className="flex min-h-screen items-center justify-center bg-white px-6 py-16 text-[#003b70]">
       <article className="w-full mt-15 max-w-2xl">
         <p className="text-base uppercase capitalize text-justify font-semibold tracking-tight text-[#ff8500]">
-          Mabz Loans
+          Mabz cash Loans
         </p>
         <p className="text-sm text-justify font-medium tracking-tight text-[#52687d]">
           NCR Registered - CP21885
@@ -20,7 +20,7 @@ export default function TermsPage() {
 
         <div className="mt-8 space-y-6 text-base leading-6 text-[#999]">
           <p className="text-justify font-medium tracking-tight">
-            These Terms &amp; Conditions govern your use of the Mabz Loans
+            These Terms &amp; Conditions govern your use of the Mabz Cash Loans
             website. By accessing or using this website, you agree to these
             terms. If you do not agree, please do not use the site.
           </p>
@@ -46,8 +46,8 @@ export default function TermsPage() {
               If you contact us by phone or email, we may ask for details needed
               to respond to your enquiry. Please do not send sensitive personal
               or financial information unless it is needed for the purpose of
-              your enquiry. Mabz Loans may request additional information by a
-              suitable, secure, and lawful method if required.
+              your enquiry. Mabz Cash Loans may request additional information
+              by a suitable, secure, and lawful method if required.
             </p>
           </section>
 
@@ -70,9 +70,9 @@ export default function TermsPage() {
             </h2>
             <p className="text-justify font-medium tracking-tight">
               All content on this website, including text, design, branding, and
-              graphics, is owned by Mabz Loans or used with permission. You may
-              not copy, reproduce, republish, or distribute content from this
-              site without prior written permission, except for personal,
+              graphics, is owned by Mabz Cash Loans or used with permission. You
+              may not copy, reproduce, republish, or distribute content from
+              this site without prior written permission, except for personal,
               non-commercial reference.
             </p>
           </section>
@@ -102,7 +102,7 @@ export default function TermsPage() {
               Limitation of liability
             </h2>
             <p className="text-justify font-medium tracking-tight">
-              To the maximum extent permitted by applicable law, Mabz Loans
+              To the maximum extent permitted by applicable law, Mabz Cash Loans
               shall not be liable for any loss, damage, or inconvenience arising
               from the use or inability to use this website, including loss of
               data, interruptions, or reliance on information provided here.

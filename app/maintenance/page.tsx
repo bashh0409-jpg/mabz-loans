@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Maintenance | Mabz Loans",
-  description: "Mabz Loans is carrying out scheduled website maintenance.",
+  title: "Maintenance | Mabz Cash Loans",
+  description: "Mabz Cash Loans is carrying out scheduled website maintenance.",
 };
 
 export default function MaintenancePage() {
@@ -13,7 +13,10 @@ export default function MaintenancePage() {
         aria-labelledby="maintenance-title"
         className="pointer-events-auto w-full max-w-2xl items-center justify-center text-center"
       >
-        <div aria-hidden="true" className="mx-auto mb-6 h-1 w-20 bg-[#ff8500]" />
+        <div
+          aria-hidden="true"
+          className="mx-auto mb-6 h-1 w-20 bg-[#ff8500]"
+        />
         <div
           aria-hidden="true"
           className="mx-auto mb-10 hidden flex size-15 items-center justify-center rounded-full border border-[#ff8500]/50 bg-[#ff8500]/10"

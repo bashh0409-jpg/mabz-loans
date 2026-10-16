@@ -67,25 +67,53 @@ const Hero = ({
         className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_85%_5%,rgb(208, 121, 28),transparent_55%)]"
       />
 
-      {/* The "bridge": a single arc drawn behind the headline */}
+      {/* Layered bridge-like contours add depth behind the headline */}
       <svg
         aria-hidden="true"
-        viewBox="0 0 1200 400"
+        viewBox="0 0 1200 720"
         preserveAspectRatio="xMidYMax slice"
         data-fade
-        className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-[65%] w-full"
+        className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-[85%] w-full"
       >
-        {/* pathLength=1 normalizes the length so dash values 1 -> 0 draw the full path */}
-        <path
-          data-arc
-          d="M0,400 C300,40 900,40 1200,400"
+        <g
           fill="none"
-          stroke="rgba(255,133,0,0.7)"
-          strokeWidth="1.5"
+          stroke="#ff8500"
+          strokeLinecap="round"
           pathLength={1}
           strokeDasharray={1}
           strokeDashoffset={0}
-        />
+        >
+          <path
+            data-arc
+            d="M-120 120 C180 220 420 280 660 420 S1040 620 1320 700"
+            strokeOpacity="0.78"
+            strokeWidth="1.5"
+          />
+          <path
+            data-arc
+            d="M-120 170 C200 265 450 330 700 470 S1045 640 1320 720"
+            strokeOpacity="0.58"
+            strokeWidth="1.25"
+          />
+          <path
+            data-arc
+            d="M-120 220 C220 300 470 380 730 520 S1085 660 1320 740"
+            strokeOpacity="0.42"
+            strokeWidth="1"
+          />
+          <path
+            data-arc
+            d="M-120 270 C240 340 500 430 760 570 S1110 680 1320 760"
+            strokeOpacity="0.28"
+            strokeWidth="1"
+          />
+          <path
+            data-arc
+            d="M-120 320 C260 390 530 480 790 620 S1135 700 1320 780"
+            strokeOpacity="0.18"
+            strokeWidth="1"
+          />
+        </g>
       </svg>
 
       <p

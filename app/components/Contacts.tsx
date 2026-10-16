@@ -15,7 +15,7 @@ const Contact = ({
 }: ContactProps) => {
   const sectionRef = useScrollTextReveal<HTMLElement>();
   const linkStyles =
-    "w-fit text-[clamp(1.5rem,4vw,3rem)] font-semibold tracking-tighter underline decoration-white/30 underline-offset-4 transition-colors hover:decoration-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white";
+    "w-fit text-[clamp(1.5rem,4vw,3rem)] font-semibold tracking-tighter underline decoration-[#003b70]/70 underline-offset-4 transition-colors hover:decoration-[#003b70] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white";
 
   return (
     <section
@@ -39,7 +39,7 @@ const Contact = ({
           <div className="col-span-12 flex flex-col gap-2 md:col-span-6">
             <p
               data-text-reveal
-              className="text-sm font-semibold uppercase tracking-tight text-white/60"
+              className="text-sm font-semibold uppercase tracking-tight text-[#003b70]"
             >
               Call
             </p>
@@ -58,7 +58,7 @@ const Contact = ({
           <div className="col-span-12 flex flex-col gap-2 md:col-span-6">
             <p
               data-text-reveal
-              className="text-sm font-semibold uppercase tracking-tight text-white/60"
+              className="text-sm font-semibold uppercase tracking-tight text-[#003b70]"
             >
               Email
             </p>
@@ -76,7 +76,7 @@ const Contact = ({
 
       <div className="mx-auto flex w-full max-w-7xl flex-col justify-between gap-3 px-4 py-6 md:flex-row md:items-center md:px-8">
         <p className="text-base text-justify font-medium tracking-tight text-[#003b70]">
-          &copy;2026 Mabz Loans. All rights reserved.
+          &copy;2026 Mabz Cash Loans. All rights reserved.
         </p>
         <div className="flex flex-wrap gap-x-5 gap-y-2 text-base font-medium tracking-tight text-[#003b70]">
           <Link

@@ -34,9 +34,9 @@ const DEFAULT_ITEMS: FaqItem[] = [
       "The cost depends on the amount you borrow and how long you take to repay it. Contact us for a quote.",
   },
   {
-    question: "Where can I find Mabz Loans located?",
+    question: "Where can I find Mabz Cash Loans?",
     answer:
-      "Mabz Loans is currently located at Office No.1, Old Eskom Building, King Street, Butterworth, 4960.",
+      "Mabz Cash Loans is currently located at Office No.1, Old Eskom Building, King Street, Butterworth, 4960.",
   },
 ];
 

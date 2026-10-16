@@ -25,31 +25,34 @@ const siteUrl =
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Mabz Loans | Fast Personal Finance",
-  description: "Affordable loan solutions for employed and SASSA beneficiaries.",
+  title: "Mabz Cash Loans | Fast Personal Finance",
+  description:
+    "Affordable loan solutions for employed and SASSA beneficiaries.",
   openGraph: {
     type: "website",
     locale: "en_ZA",
-    siteName: "Mabz Loans",
-    title: "Mabz Loans | Fast Personal Finance",
-    description: "Affordable loan solutions for employed and SASSA beneficiaries.",
+    siteName: "Mabz Cash Loans",
+    title: "Mabz Cash Loans | Fast Personal Finance",
+    description:
+      "Affordable loan solutions for employed and SASSA beneficiaries.",
     images: [
       {
         url: "/share-preview.jpg",
         width: 1179,
         height: 688,
-        alt: "Mabz Loans - your bridge to better finances",
+        alt: "Mabz Cash Loans - your bridge to better finances",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mabz Loans | Fast Personal Finance",
-    description: "Affordable loan solutions for employed and SASSA beneficiaries.",
+    title: "Mabz Cash Loans | Fast Personal Finance",
+    description:
+      "Affordable loan solutions for employed and SASSA beneficiaries.",
     images: [
       {
         url: "/share-preview.jpg",
-        alt: "Mabz Loans - your bridge to better finances",
+        alt: "Mabz Cash Loans - your bridge to better finances",
       },
     ],
   },

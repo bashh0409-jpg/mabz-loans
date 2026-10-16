@@ -20,7 +20,8 @@ export default function NotFound() {
 
           <p className="geist max-w-xs overflow-hidden text-center text-[13px] font-semibold leading-4 tracking-tight text-[#52687d]">
             Sorry, we couldn&apos;t find that page. The page you&apos;re looking
-            for isn&apos;t here. Let&apos;s get you back to Mabz Loans and get closer to your financial goals.
+            for isn&apos;t here. Let&apos;s get you back to Mabz Cash Loans and
+            get closer to your financial goals.
           </p>
 
           <Link
