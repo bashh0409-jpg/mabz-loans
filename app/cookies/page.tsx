@@ -7,7 +7,8 @@ export default function CookiesPage() {
         <p className="text-base uppercase capitalize text-justify font-semibold tracking-tight text-[#ff8500]">
           Mabz cash Loans
         </p>
-        <p className="text-sm text-justify font-medium tracking-tight text-[#52687d]">
+        
+        <p className="text-base text-justify font-medium tracking-tight text-[#999]">
           NCR Registered - CP21885
         </p>
         <h1 className="mt-10 mb-4 text-5xl tracking-tighter font-semibold text-[#003b70]">

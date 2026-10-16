@@ -10,7 +10,7 @@ const Page = () => {
     <div className="scroll-smooth scrollbar-hide">
       
      
-      <NewHero />
+      <Hero />
       <Requirements />
       <Faq />
       <Contacts />

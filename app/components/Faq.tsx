@@ -55,7 +55,7 @@ const Faq = ({ heading = "Questions", items = DEFAULT_ITEMS }: FaqProps) => {
       ref={sectionRef}
       id="faq"
       aria-labelledby="faq-heading"
-      className="w-full bg-white text-[#003b70]"
+      className="w-full bg-[#003b70] text-white"
     >
       <div className="mx-auto grid max-w-7xl grid-cols-12 gap-y-10 px-4 py-20 md:px-8 md:py-32">
         <h2
@@ -75,7 +75,7 @@ const Faq = ({ heading = "Questions", items = DEFAULT_ITEMS }: FaqProps) => {
             return (
               <li
                 key={question}
-                className="border-t border-[#003b70]/15 last:border-b"
+                className="border-t border-white/15 last:border-b"
               >
                 <h3>
                   <button

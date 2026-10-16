@@ -1,8 +1,10 @@
+// Contact.tsx
 "use client";
 
 import React from "react";
 import Link from "next/link";
 import useScrollTextReveal from "./useScrollTextReveal";
+import ContourLines from "./ContourLines";
 
 interface ContactProps {
   phones?: string[];
@@ -22,10 +24,15 @@ const Contact = ({
       ref={sectionRef}
       id="contact"
       aria-labelledby="contact-heading"
-      className="w-full bg-[#ff8500] text-[#003b70]"
+      // isolate makes -z-10 on the lines sit above the orange background but below the content;
+      // overflow-hidden clips the lines that deliberately overshoot the viewBox
+      className="relative isolate w-full overflow-hidden bg-[#ff8500] text-[#003b70]"
     >
+      {/* opacity-50 knocks the navy back so the lines don't fight the navy text on top */}
+      <ContourLines className="pointer-events-none absolute inset-0 -z-10 h-full w-full opacity-50" />
+
       <div className="mx-auto flex max-w-7xl flex-col gap-12 px-4 py-20 md:gap-20 md:px-8 md:py-32">
-        <p className="text-sm text-justify font-semibold tracking-tight text-[#003b70]">
+        <p className="text-sm  text-justify font-semibold tracking-tight text-[#003b70]">
           NCR Registered - CP21885
         </p>
         <h2
