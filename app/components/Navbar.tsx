@@ -175,12 +175,14 @@ const Navbar = () => {
       >
         <Link
           href="/#home"
-          className={`uppercase ${NAV_ITEM_CLASSES}`}
+          className={`uppercase  ${NAV_ITEM_CLASSES}`}
           aria-label="Mabz Cash Loans"
           onClick={() => setMenuOpen(false)}
           {...navTextHandlers}
         >
-          <RollingLabel label="Mabz Cash Loans" />
+          <span className="text-xl md:text-2xl lg:text-4xl xl:text-5xl">
+            Mabz Cash Loans
+          </span>
         </Link>
 
         <div className="hidden gap-3 md:flex">

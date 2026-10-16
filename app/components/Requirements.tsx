@@ -88,13 +88,26 @@ const Requirements = ({
             <li
               key={title}
               data-card
-              // group lets the number and title restyle together when the card is hovered or focused
-              className="group flex min-h-[16rem] flex-col justify-between bg-[#003b70]/5 p-5 transition-colors duration-300 hover:bg-[#003b70] hover:text-white md:aspect-[4/5] md:min-h-0"
+              className={`group flex min-h-[16rem] flex-col justify-between p-5 transition-colors duration-300 md:aspect-[4/5] md:min-h-0 ${
+                i === 1
+                  ? "bg-[#ff9d2e] text-[#003b70] hover:bg-[#e88a1c] hover:text-white"
+                  : i === 3
+                    ? "bg-[#003b70] text-white hover:bg-[#002b52]"
+                    : "bg-[#003b70]/5 hover:bg-[#003b70] hover:text-white"
+              }`}
             >
-              {/* padStart keeps numerals aligned as 01, 02, 03 */}
-              <span className="text-sm font-semibold tracking-tight text-[#003b70]/50 transition-colors group-hover:text-[#ff9d2e]">
+              <span
+                className={`text-sm font-semibold tracking-tight transition-colors ${
+                  i === 1
+                    ? "text-[#003b70]/60 group-hover:text-white"
+                    : i === 3
+                      ? "text-white/60 group-hover:text-[#ff9d2e]"
+                      : "text-[#003b70]/50 group-hover:text-[#ff9d2e]"
+                }`}
+              >
                 {String(i + 1).padStart(2, "0")}
               </span>
+
               <span className="text-[clamp(1.75rem,3.2vw,2.75rem)] font-semibold uppercase leading-[0.95] tracking-tighter">
                 {title}
               </span>
